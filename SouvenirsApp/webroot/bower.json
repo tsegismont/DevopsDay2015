@@ -4,5 +4,7 @@
     "Thomas Segismont"
   ],
   "dependencies": {
+    "bootstrap": "3.3.5",
+    "bootswatch-dist": "3.3.5-cerulean"
   }
 }
