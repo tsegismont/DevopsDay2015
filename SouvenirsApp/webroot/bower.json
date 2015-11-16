@@ -5,6 +5,7 @@
   ],
   "dependencies": {
     "bootstrap": "3.3.5",
-    "bootswatch-dist": "3.3.5-cerulean"
+    "bootswatch-dist": "3.3.5-cerulean",
+    "angular": "1.4.7"
   }
 }

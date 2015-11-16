@@ -1,0 +1,4 @@
+#!/bin/bash
+
+vertx run app.js -Dvertx.metrics.options.enabled=true -Dvertx.metrics.options.jmxEnabled=true
+
