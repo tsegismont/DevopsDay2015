@@ -9,8 +9,14 @@
   <link rel="stylesheet" href="css/souvenirs.css">
 
   <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="libs/jquery-ui/jquery-ui.min.js"></script>
+  <script src="libs/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
   <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="libs/angular/angular.min.js"></script>
+  <script src="libs/d3/d3.js" charset="utf-8"></script>
+  <script src="libs/d3-tip/index.js" charset="utf-8"></script>
+  <script src="libs/moment/moment.js"></script>
+  <script src="libs/hawkular-charts/hawkular-charts.js"></script>
   <script src="js/souvenirs.js"></script>
 
 </head>
@@ -27,6 +33,9 @@
         <ul class="nav navbar-nav">
           <li><a href="/">Accueil</a></li>
           <li class="active"><a href="boutique.html">Boutique</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="admin.html">Admin</a></li>
         </ul>
       </div>
     </div>
@@ -63,9 +72,7 @@
 
   <div class="media" style="margin-bottom: 100px;">
     <div class="media-left">
-      <a href="#">
-        <img class="media-object" src="img/Austin-Powers.jpg" alt="Austin Powers, UK" style="width: 128px; height: 128px;">
-      </a>
+      <img class="media-object" src="img/Austin-Powers.jpg" alt="Austin Powers, UK" style="width: 128px; height: 128px;">
     </div>
     <div class="media-body">
       <h4 class="media-heading">Austin Powers, UK</h4>

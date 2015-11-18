@@ -1,4 +1,16 @@
-var souvenirsApp = angular.module('souvenirsApp', []);
+$(function () {
+  $('input.ui-datetime').datetimepicker({
+    dateFormat: 'yy-mm-dd',
+    timeFormat: 'HH:mm:ss',
+    showSecond: true
+  });
+});
+
+function error(msg) {
+  window.alert('ERROR: ' + msg);
+}
+
+var souvenirsApp = angular.module('souvenirsApp', ['hawkular.charts']);
 
 souvenirsApp.controller('ItemsCtrl', function ($scope) {
   $scope.items = [
@@ -44,4 +56,78 @@ souvenirsApp.controller('LikesCtrl', function ($scope, $http) {
       $scope.likes = data.value;
     });
   }
+});
+
+souvenirsApp.controller('ChartCtrl', function ($scope, $http) {
+  var dateTimeFormat = 'YYYY-MM-DD HH:mm:ss';
+
+  $scope.reset = function () {
+    $scope.metricType = 'gauge';
+    $scope.metricName = '';
+    $scope.metrics = [];
+
+    var now = moment();
+    $scope.start = now.clone().subtract(5, 'm').format(dateTimeFormat);
+    $scope.end = now.format(dateTimeFormat);
+
+    $scope.chartData = [];
+
+    $scope.getMetricNames();
+  };
+
+  $scope.getMetricNames = function () {
+    $http.get('http://localhost:8080/hawkular/metrics/metrics', {
+      headers: {
+        'Hawkular-Tenant': 'default'
+      },
+      params: {
+        'type': $scope.metricType
+      }
+    }).then(function (response) {
+      $scope.metrics = _.map(response.data, function (m) {
+        return m.id;
+      });
+    }, function (response) {
+      console.error(response);
+      window.alert('HTTP error')
+    });
+  };
+
+  $scope.hasData = function () {
+    return $scope.chartData.length > 0;
+  };
+
+  $scope.update = function () {
+    var start = moment($scope.start, dateTimeFormat, true);
+    if (!start.isValid()) {
+      error('Invalid start moment');
+      return;
+    }
+    var end = moment($scope.end, dateTimeFormat, true);
+    if (!end.isValid()) {
+      error('Invalid end moment');
+      return;
+    }
+    if (end - start <= 0) {
+      error('Invalid time range');
+      return;
+    }
+
+    $http.get('http://localhost:8080/hawkular/metrics/' + $scope.metricType + 's/' + $scope.metricName + '/data', {
+      headers: {
+        'Hawkular-Tenant': 'default'
+      },
+      params: {
+        'start': start.valueOf(),
+        'end': end.valueOf()
+      }
+    }).then(function (response) {
+      $scope.chartData = response.data;
+    }, function (response) {
+      console.error(response);
+      window.alert('HTTP error')
+    });
+  };
+
+  $scope.reset();
 });
