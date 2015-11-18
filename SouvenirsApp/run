@@ -1,4 +1,4 @@
 #!/bin/bash
 
-vertx run app.js -Dvertx.metrics.options.enabled=true
+vertx run app.js -Dvertx.metrics.options.enabled=true -Dvertx.metrics.options.metricsBridgeEnabled=true -Dvertx.metrics.options.metricsBridgeAddress=metrics
 
