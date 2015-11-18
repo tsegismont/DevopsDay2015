@@ -16,6 +16,9 @@ router.post('/rest/likes/increment').produces('application/json').handler(functi
   var response = routingContext.response();
   response.putHeader('Content-Type', 'application/json');
   response.end(JSON.stringify({'value': ++likes}));
+});
+
+vertx.setTimer(5000, function () {
   vertx.eventBus().publish('metrics', {'source': 'app.souvenirs.likes', 'value': likes, 'type': 'counter'});
 });
 
