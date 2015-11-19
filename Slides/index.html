@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+	<html class="sl-root base export loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Hawkular Powers: le Dev au pistolet d&#39;Ops: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Theme CSS -->
+		<style id="theme-css-output" type="text/css">
+			.reveal {
+  /*slide-default*/
+
+  /*Custom Ordered Lists */
+
+  /*helpers*/
+
+  /*fixing left aligned text*/
+
+  /*h1,h2,h3,h4,h5,h6{&::first-letter{margin-left:-.09em;}}*/
+
+  /*icon absolute brute-fix*/
+
+  /*
+.present .icon.stroked path.long{ stroke-width: 2px ;
+-webkit-animation: icon-animation-long 3.5s 1.5s 1;
+-moz-animation:    icon-animation-long 3.5s 1.5s 1;
+animation:         icon-animation-long 3.5s 1.5s 1;
+}*/
+
+  /*
+.present .icon.stroked path.short{
+-webkit-animation: icon-animation-short 3.5s 1.5s 1;
+-moz-animation:    icon-animation-short 3.5s 1.5s 1;
+animation:         icon-animation-short 3.5s 1.5s 1;
+}*/
+
+  /*controls logic*/
+
+  /*animated logos with complex svg segments*/
+
+  /*transitions*/
+
+  /*logos svg files that contain inverted path alternates */
+
+  /* call to action */
+
+  /* tables in snippets.... the devil */
+
+  /* tables in text */
+
+  /*testimonial snippet */
+
+  /* SPEAKERS NOTES */
+
+  /*for inverting images*/
+
+  /**/
+
+}
+.reveal .reveal,
+.reveal .sl-block,
+.reveal .sl-block-content,
+.reveal .sl-block-content div,
+.reveal .sl-block-content p,
+.reveal .sl-block-content h1,
+.reveal .sl-block-content h2,
+.reveal .sl-block-content h3,
+.reveal .sl-block-content h4 {
+  font-family: Overpass, "Hiragino Kaku Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Overpass, sans-serif !important;
+}
+.reveal .slide-background {
+  background: #f3f4f4;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.reveal .slide-background.has-light-background {
+  /*background-image: url(//s3.amazonaws.com/media-p.slid.es/uploads/team-32/images/1297460/standard-background.svg);*/
+
+}
+.reveal .backgrounds .paint-it-red {
+  background-color: #c00 !important;
+  -moz-background-blend-mode: multiply;
+  -webkit-background-blend-mode: multiply;
+  -ms-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+}
+.reveal .paint-it-red {
+  color: #fff;
+}
+.reveal .sl-block[data-block-type="snippet"] text,
+.reveal .sl-block[data-block-type="image"] text,
+.reveal .sl-block[data-block-type="snippet"] tspan,
+.reveal .sl-block[data-block-type="image"] tspan,
+.reveal .sl-block[data-block-type="snippet"] polygon,
+.reveal .sl-block[data-block-type="image"] polygon,
+.reveal .sl-block[data-block-type="snippet"] path,
+.reveal .sl-block[data-block-type="image"] path,
+.reveal .sl-block[data-block-type="snippet"] rect,
+.reveal .sl-block[data-block-type="image"] rect,
+.reveal .sl-block[data-block-type="snippet"] ellipse,
+.reveal .sl-block[data-block-type="image"] ellipse {
+  fill: currentcolor;
+}
+.reveal section,
+.reveal.reveal .has-light-background {
+  color: #4c575e;
+}
+.reveal.reveal .has-dark-background,
+.reveal section.background-shade-dark {
+  color: #fff;
+}
+.reveal .has-dark-background .icon.stroked path,
+.reveal section.background-shade-dark .icon.stroked path,
+.reveal section.light-foreground .icon.stroked path {
+  stroke: #fff !important;
+}
+.reveal .has-dark-background .redhat-product-logotype path,
+.reveal section.background-shade-dark .redhat-product-logotype path,
+.reveal section.light-foreground .redhat-product-logotype path {
+  fill: #ffffff;
+}
+.reveal .has-dark-background text.logotext,
+.reveal section.background-shade-dark text.logotext,
+.reveal section.light-foreground text.logotext,
+.reveal .has-dark-background .logotext text,
+.reveal section.background-shade-dark .logotext text,
+.reveal section.light-foreground .logotext text,
+.reveal .has-dark-background path.logotext,
+.reveal section.background-shade-dark path.logotext,
+.reveal section.light-foreground path.logotext,
+.reveal .has-dark-background path.logotype,
+.reveal section.background-shade-dark path.logotype,
+.reveal section.light-foreground path.logotype,
+.reveal .has-dark-background .logotext path,
+.reveal section.background-shade-dark .logotext path,
+.reveal section.light-foreground .logotext path {
+  fill: #fff !important;
+}
+.reveal .has-dark-background .closing-logo .logotext,
+.reveal section.background-shade-dark .closing-logo .logotext,
+.reveal section.light-foreground .closing-logo .logotext,
+.reveal .has-dark-background .redhat-logo .logotext,
+.reveal section.background-shade-dark .redhat-logo .logotext,
+.reveal section.light-foreground .redhat-logo .logotext {
+  fill: #ffffff !important;
+}
+.reveal .has-light-background {
+  color: #222222;
+}
+.reveal .has-light-background .icon.stroked path {
+  stroke: currentcolor;
+}
+.reveal .has-light-background .redhat-logo .logotext {
+  fill: #000000 !important;
+}
+.reveal .sl-block-content ol li {
+  position: relative;
+  padding-bottom: .5em;
+}
+.reveal .sl-block-content ol li > p:first-child {
+  margin: 0;
+}
+.reveal .sl-block-content ol > li::before {
+  margin-left: -2.5em;
+}
+.reveal .sl-block-content > ol > li:before {
+  float: left;
+  text-align: center;
+  box-shadow: inset 0 0 0 .1em;
+  border-radius: 50%;
+}
+.reveal .sl-block-content ol {
+  counter-reset: section;
+  list-style-type: none;
+  margin: 0 0 0 2.5em;
+  display: block;
+}
+.reveal .sl-block-content ol ol {
+  margin-top: .5em;
+}
+.reveal .sl-block-content ol > li:before {
+  font-weight: 400;
+  display: inline-block;
+  width: 1.75em;
+  height: 1.75em;
+  line-height: 1.75em;
+  text-align: center;
+  letter-spacing: 0;
+  font-size: .75em;
+  margin: 0 0.75em 0 -2.5em;
+  counter-increment: section;
+  content: counters(section, ".") " ";
+}
+.reveal .sl-block-content > ol > li ol li:before {
+  opacity: .5;
+  text-align: left;
+  box-shadow: none;
+  letter-spacing: .1em;
+}
+.reveal .sl-block-content > ol > li > ol > li > ol > li:before {
+  width: 4em;
+  left: -3em;
+  font-size: .75em;
+}
+.reveal .has-dark-background .sl-block-content > ol > li:before {
+  color: currentcolor;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 0.2em rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+.reveal .sl-block-content > ol ol ol li:before {
+  opacity: 1;
+  font-size: .55em !important;
+  width: 3.5em !important;
+}
+.reveal .sl-block-content > ol ol ol {
+  margin-left: 1.5em !important;
+}
+.reveal .uppercase {
+  text-transform: uppercase;
+}
+.reveal .sl-block[data-block-type="text"] > .initial h1,
+.reveal .sl-block[data-block-type="text"] > .initial h2,
+.reveal .sl-block[data-block-type="text"] > .initial h3 {
+  text-transform: initial;
+}
+.reveal .force-mono text,
+.reveal .force-mono tspan,
+.reveal .force-mono polygon,
+.reveal .force-mono path,
+.reveal .force-mono rect,
+.reveal .force-mono ellipse {
+  fill: currentcolor !important;
+}
+.reveal .force-red .stroked path {
+  stroke: #c00;
+}
+.reveal .force-red,
+.reveal .force-red text,
+.reveal .force-red tspan,
+.reveal .force-red polygon,
+.reveal .force-red path,
+.reveal .force-red rect,
+.reveal .force-red ellipse {
+  color: #c00;
+  fill: currentcolor !important;
+}
+.reveal .dark-foreground,
+.reveal .background-shade-light {
+  color: #000;
+}
+.reveal .background-shade-dark {
+  color: #fff;
+}
+.reveal .dark-foreground text.logotext,
+.reveal section.background-shade-light text.logotext,
+.reveal section.dark-foreground text.logotext,
+.reveal .dark-foreground .logotext text,
+.reveal section.background-shade-light .logotext text,
+.reveal section.dark-foreground .logotext text,
+.reveal .dark-foreground path.logotext,
+.reveal section.background-shade-light path.logotext,
+.reveal section.dark-foreground path.logotext,
+.reveal .dark-foreground path.logotype,
+.reveal section.background-shade-light path.logotype,
+.reveal section.dark-foreground path.logotype,
+.reveal .dark-foreground .logotext path,
+.reveal section.background-shade-light .logotext path,
+.reveal section.dark-foreground .logotext path,
+.reveal .dark-foreground .product,
+.reveal section.background-shade-light .product,
+.reveal section.dark-foreground .product {
+  fill: currentcolor !important;
+}
+.reveal .dark-foreground .redhat-logo .logotext,
+.reveal section.background-shade-light .redhat-logo .logotext,
+.reveal section.dark-foreground .redhat-logo .logotext {
+  fill: currentcolor !important;
+}
+.reveal .slide-background.background-shade-dark:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.8);
+}
+.reveal .slide-background.background-shade-light:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.reveal .slides > section {
+  text-align: left;
+  letter-spacing: .061em;
+}
+.reveal .slides > section h1 {
+  line-height: 1em;
+  font-weight: 700 ;
+  letter-spacing: .04em ;
+  font-size: 3em ;
+}
+.reveal .slides > section h2 {
+  font-size: 2em;
+  font-weight: 400 ;
+  letter-spacing: .15em ;
+  line-height: 1.15em;
+}
+.reveal .slides > section h3 {
+  font-weight: 700 ;
+  font-size: 1em ;
+  letter-spacing: .05em ;
+  line-height: 1.25em;
+}
+.reveal .slides > section p {
+  margin-bottom: .5em;
+}
+.reveal .slides > section blockquote {
+  font-style: normal;
+  box-shadow: none;
+}
+.reveal .progress {
+  background-color: transparent;
+}
+.reveal .progress span {
+  background-color: #5e6a71;
+}
+.reveal .absolute-element svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.reveal .icon.stroked {
+  width: 282px;
+  height: 282px;
+}
+.reveal .icon.stroked.icon-arrow path {
+  stroke-width: 4px !important;
+}
+.reveal .icon.stroked path {
+  fill: none;
+  stroke-width: 1.5px;
+  transition-delay: .5s !important;
+  stroke-dashoffset: 0;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #5e6a71;
+}
+.reveal .icon.stroked path.long {
+  stroke-dasharray: 420,420;
+  transition: 2.5s all ease;
+}
+.reveal .icon.stroked path.longer {
+  stroke-dasharray: 512,512;
+  transition: 2.5s all ease;
+}
+.reveal .icon.stroked path.short {
+  stroke-dasharray: 90,90;
+  transition: 5s all ease;
+}
+.reveal .icon.stroked path.shortest {
+  stroke-dasharray: 5,5;
+  transition: 2s all ease;
+}
+.reveal .icon.stroked path.round {
+  stroke-linecap: round ;
+  stroke-linejoin: round ;
+}
+.reveal .icon.stroked path.virtual {
+  transition: .5s all ease;
+  stroke-dasharray: 1.1, 3;
+  stroke-linecap: round ;
+}
+.reveal .icon.stroked path.dashed {
+  stroke-dasharray: 3, 3;
+}
+.reveal .icon.stroked path.hand {
+  stroke-linecap: round;
+}
+.reveal .present path.virtual {
+  -webkit-animation: virtual-outline 60s infinite linear;
+  -moz-animation: virtual-outline 60s infinite linear;
+  animation: virtual-outline 60s infinite linear;
+}
+@-webkit-keyframes virtual-outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 512;
+  }
+}
+@-moz-keyframes virtual-outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 512;
+  }
+}
+@keyframes virtual-outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 512;
+  }
+}
+.reveal a {
+  box-shadow: 0 0.066666em;
+}
+.reveal .overview section.present {
+  border: 12px solid white !important;
+  box-shadow: 0 0 0 10px #ffffff, inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.reveal .rh-pattern {
+  width: 256px;
+  height: 256px;
+}
+.reveal .rh-pattern path {
+  transition: all .5s ease;
+}
+.reveal .future .rh-pattern path {
+  stroke-dasharray: 0, 85 !important;
+}
+.reveal .present .rh-pattern path {
+  stroke-dasharray: 80, 0 !important;
+}
+.reveal div[data-block-type="snippet"] > .sl-block-content > svg,
+.reveal div[data-block-type="snippet"] .icon,
+.reveal div[data-block-type="snippet"] .product {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.reveal div[data-block-type="snippet"] .icon {
+  top: -15%;
+  right: -15%;
+  bottom: -15%;
+  left: -15%;
+  width: 130%;
+  height: 130%;
+}
+.reveal div[data-block-type="snippet"] {
+  min-width: 60px !important;
+  min-height: 40px !important;
+}
+.reveal div[data-block-type="text"] {
+  font-size: 20px;
+}
+.reveal .triangle-element,
+.reveal .triangle-element * {
+  user-select: none;
+}
+.reveal .has-light-background .closing-logo.logotype path {
+  fill: black !important;
+}
+@-webkit-keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+@-moz-keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+@-o-keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+@keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+.reveal .present .closing-logo.icon {
+  -webkit-animation: closing-animation 1.5s 1;
+  -moz-animation: closing-animation 1.5s 1;
+  -o-animation: closing-animation 1.5s 1;
+  animation: closing-animation 1.5s 1;
+}
+.reveal .present .closing-logo.logotype {
+  -webkit-animation: closing-text-animation 1.8s 1;
+  -moz-animation: closing-text-animation 1.8s 1;
+  -o-animation: closing-text-animation 1.8s 1;
+  animation: closing-text-animation 1.8s 1;
+}
+@-webkit-keyframes closing-text-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+  }
+  70% {
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+@-moz-keyframes closing-text-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+  }
+  70% {
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+@keyframes closing-text-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+  }
+  70% {
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+.reveal .brand-pattern-paths path,
+.reveal .pattern-path {
+  stroke-width: 1;
+  fill: none;
+}
+.reveal .brand-pattern-paths path {
+  fill: none !important;
+}
+.reveal pattern {
+  patterntransform: scale(2) !important;
+}
+.reveal pattern.normal use {
+  stroke: #5e6a71;
+  fill: none;
+}
+.reveal pattern.light use {
+  stroke: #fff !important;
+  fill: none;
+}
+.reveal pattern.dark use {
+  stroke: #000 !important;
+  fill: none;
+}
+.reveal .brand-pattern {
+  min-width: 40px;
+  min-height: 40px;
+  position: absolute;
+  top: 0 ;
+  left: 0 ;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.reveal .brand-pattern path,
+.reveal .brand-pattern rect {
+  width: 100% !important;
+  height: 100%;
+}
+.reveal .brand-pattern.corporate {
+  fill: url(#pattern-corporate);
+}
+.reveal .brand-pattern.storage {
+  fill: url(#pattern-storage);
+}
+.reveal .brand-pattern.infrastructure {
+  fill: url(#pattern-infrastructure);
+}
+.reveal .brand-pattern.cloud-infrastructure {
+  fill: url(#pattern-cloud-infrastructure);
+}
+.reveal .brand-pattern.development {
+  fill: url(#pattern-development);
+}
+.reveal .brand-pattern.business-process {
+  fill: url(#pattern-business-process);
+}
+.reveal .brand-pattern.cloud-development {
+  fill: url(#pattern-cloud-development);
+}
+.reveal .brand-pattern.development {
+  fill: url(#pattern-development);
+}
+.reveal .brand-pattern.business-process {
+  fill: url(#pattern-business-process);
+}
+.reveal .brand-pattern.cloud-development {
+  fill: url(#pattern-cloud-development);
+}
+.reveal .brand-pattern.services {
+  fill: url(#pattern-services);
+}
+.reveal .brand-pattern.partners {
+  fill: url(#pattern-partners);
+}
+.reveal .brand-pattern.community {
+  fill: url(#pattern-community);
+}
+.reveal #pattern-corporate-2 use {
+  stroke: #dd0000;
+}
+.reveal #pattern-corporate use {
+  stroke: #cc0000;
+}
+.reveal #pattern-storage use {
+  stroke: #ec7a08;
+}
+.reveal #pattern-infrastructure-path {
+  stroke: #0088ce;
+}
+.reveal #pattern-cloud-infrastructure use {
+  stroke: #0088ce;
+}
+.reveal #pattern-development use {
+  stroke: #3f9c35;
+}
+.reveal #pattern-cloud-development use {
+  stroke: #3f9c35;
+}
+.reveal #pattern-business-process use {
+  stroke: #3f9c35;
+}
+.reveal #pattern-partners use {
+  stroke: #005172;
+}
+.reveal #pattern-services use {
+  stroke: #5e6a71;
+}
+.reveal section,
+.reveal .slide-background {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.reveal .slides > section.transition-slide,
+.reveal .slides > section.transition-slide + section.future,
+.reveal .slides > section.transition-slide + section.present,
+.reveal .backgrounds > .slide-background.transition-slide,
+.reveal .backgrounds > .slide-background.transition-slide + .slide-background.future,
+.reveal .backgrounds > .slide-background.transition-slide + .slide-background.present {
+  transition: all 1s ease  !important;
+}
+.reveal .backgrounds > .slide-background.transition-slide {
+  opacity: 1 ;
+}
+.reveal .backgrounds > .slide-background.transition-slide.past {
+  z-index: 99;
+  -webkit-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
+.reveal .backgrounds > .slide-background.transition-slide.future,
+.reveal .backgrounds > .slide-background.transition-slide.present + .slide-background.future {
+  -webkit-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+.reveal .slides > section.transition-slide.past {
+  z-index: 99;
+  -webkit-transform: translate(-150%, 0);
+  -ms-transform: translate(-150%, 0);
+  transform: translate(-150%, 0);
+}
+.reveal .slides > section.transition-slide.future,
+.reveal .slides > section.transition-slide.future + section {
+  -webkit-transform: translate(150%, 0);
+  -ms-transform: translate(150%, 0);
+  transform: translate(150%, 0);
+}
+.reveal .slides > section.transition-slide-up,
+.reveal .slides > section.transition-slide-up + section.future,
+.reveal .slides > section.transition-slide-up + section.present,
+.reveal .backgrounds > .slide-background.transition-slide-up,
+.reveal .backgrounds > .slide-background.transition-slide-up + .slide-background.future .backgrounds > .slide-background.transition-slide-up + .slide-background.present {
+  transition: all 1s ease  !important;
+}
+.reveal .backgrounds > .slide-background.transition-slide-up {
+  opacity: 1 ;
+}
+.reveal .backgrounds > .slide-background.transition-slide-up.past {
+  z-index: 99;
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+.reveal .backgrounds > .slide-background.transition-slide-up.future,
+.reveal .backgrounds > .slide-background.transition-slide-up.present + .slide-background.future {
+  -webkit-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+}
+.reveal .slides > section.transition-slide-up.past {
+  z-index: 99;
+  -webkit-transform: translate(0, -150%);
+  -ms-transform: translate(0, -150%);
+  transform: translate(0, -150%);
+}
+.reveal .slides > section.transition-slide-up.future,
+.reveal .slides > section.transition-slide-up.present + section {
+  -webkit-transform: translate(0, 150%);
+  -ms-transform: translate(0, 150%);
+  transform: translate(0, 150%);
+}
+.reveal .slides > section.transition-zoom-in,
+.reveal .slides > section.transition-zoom-in + section.future,
+.reveal .slides > section.transition-zoom-in + section.present,
+.reveal .backgrounds > .slide-background.transition-zoom-in,
+.reveal .backgrounds > .slide-background.transition-zoom-in + .slide-background.future .backgrounds > .slide-background.transition-zoom-in + .slide-background.present {
+  -webkit-transition: all 1s ease  !important;
+  -moz-transition: all 1s ease  !important;
+  transition: all 1s ease  !important;
+}
+.reveal .backgrounds > .slide-background.transition-zoom-in.past {
+  opacity: 0 !important;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(0.1 0.5);
+  transform: scale(1.5);
+}
+.reveal .backgrounds > .slide-background.transition-zoom-in.future,
+.reveal .backgrounds > .slide-background.transition-zoom-in.present + .slide-background.future {
+  opacity: 0 !important;
+  -webkit-transform: scale(0.01);
+  -ms-transform: scale(0.01);
+  transform: scale(0.01);
+}
+.reveal .past {
+  z-index: -1;
+  opacity: 0 !important;
+}
+.reveal .present + .slide-background.future {
+  z-index: 99;
+}
+.reveal .slides > section.transition-zoom-in.past {
+  z-index: 99;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.reveal .slides > section.transition-zoom-in.future {
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+}
+@-webkit-keyframes icon-animation-long {
+  0% {
+    stroke-dashoffset: 420;
+    stroke-width: .5px;
+  }
+}
+@-moz-keyframes icon-animation-long {
+  0% {
+    stroke-dashoffset: 420;
+    stroke-width: .5px;
+  }
+}
+@keyframes icon-animation-long {
+  0% {
+    stroke-dashoffset: 420;
+    stroke-width: .5px;
+  }
+}
+@-webkit-keyframes icon-animation-short {
+  0% {
+    stroke-dashoffset: 90;
+  }
+}
+@-moz-keyframes icon-animation-short {
+  0% {
+    stroke-dashoffset: 90;
+  }
+}
+@keyframes icon-animation-short {
+  0% {
+    stroke-dashoffset: 90;
+  }
+}
+.reveal .present .animate.icon.stroked path,
+.reveal .present .animate .icon.stroked path,
+.reveal .fragment .icon.stroked path {
+  animation: 0;
+  -moz-animation: 0;
+  -webkit-animation: 0;
+  display: none;
+}
+.reveal .present .animate.icon.stroked path.long,
+.reveal .present .animate .icon.stroked path.long,
+.reveal .fragment.visible .icon.stroked path.long {
+  display: block;
+  stroke-width: 2px ;
+  -webkit-animation: icon-animation-long 3.5s 0.5s 1;
+  -moz-animation: icon-animation-long 3.5s 0.5s 1;
+  animation: icon-animation-long 3.5s 0.5s 1;
+}
+.reveal .present .animate.icon.stroked path.short,
+.reveal .present .animate .icon.stroked path.short,
+.reveal .fragment.visible .icon.stroked path.short {
+  display: block;
+  -webkit-animation: icon-animation-short 3.5s 0.5s 1 !important;
+  -moz-animation: icon-animation-short 3.5s 0.5s 1 !important;
+  animation: icon-animation-short 3.5s 0.5s 1 !important;
+}
+.reveal .triangle-element {
+  transition: all 0.4s cubic-bezier(0.21, 0.9, 0.55, 1) 5s;
+}
+.reveal.reveal:hover .triangle-element {
+  transition: all 1s cubic-bezier(0.21, 0.9, 0.55, 1.16) 0s !important;
+  top: 100% !important;
+  left: 100% !important;
+  opacity: 0.95;
+}
+.reveal .has-dark-background .only-dark {
+  display: none;
+}
+.reveal .has-light-background .only-light {
+  display: none;
+}
+.reveal .thinner .icon.stroked path {
+  stroke-width: 1px !important;
+}
+.reveal .thinnest .icon.stroked path {
+  stroke-width: 0.05em !important;
+}
+.reveal .thicker .icon.stroked path {
+  stroke-width: 3px !important;
+}
+.reveal .thickest .icon.stroked path {
+  stroke-width: 4px !important;
+}
+.reveal .angle {
+  -ms-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.reveal .rangle {
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.reveal .sl-block > .vertical {
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.reveal .skewed {
+  transition: all 1s cubic-bezier(0.13, 0.81, 0.08, 1);
+  -moz-transform: skew(-45deg, 0);
+  -ms-transform: skew(-45deg, 0);
+  -webkit-transform: skew(-45deg, 0);
+  transform: skew(-45deg, 0);
+}
+.reveal .future .skewed {
+  margin-left: -800%;
+  opacity: 0;
+}
+.reveal .past .skewed {
+  margin-left: 800%;
+  opacity: 0;
+}
+.reveal .item-label,
+.reveal .item-box {
+  letter-spacing: 0em;
+  font-weight: 500;
+}
+.reveal .epic-content-box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.reveal .has-dark-background .epic-content-box {
+  box-shadow: inset 0 0 0.51em rgba(0, 0, 0, 0.25), 0 0.05em 0.05em rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.reveal .has-light-background .epic-content-box {
+  box-shadow: inset 0 0 0.2em rgba(255, 255, 255, 0.5), 0 0.06666em 0.555em 0 rgba(0, 0, 0, 0.12);
+}
+.reveal .controls {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.2);
+  bottom: 1%;
+  right: 1%;
+}
+.reveal .controls {
+  opacity: 0 !important;
+  transition: all .5s ease 4.8s;
+  transform: scale(0.4);
+}
+.reveal.reveal:hover .controls {
+  transform: scale(1);
+  opacity: 1 !important;
+  transition: all .5s ease 0s;
+}
+.reveal .slides > section.present.in-3d-appear,
+.reveal .backgrounds > .slide-background.present.in-3d-appear {
+  -moz-animation: slide-3d-appear 2s ease 1;
+  -webkit-animation: slide-3d-appear 2s ease 1;
+  animation: slide-3d-appear 2s ease 1;
+}
+@keyframes slide-3d-appear {
+  0% {
+    transition-property: all;
+    transition-duration: 1s;
+    -webkit-transform: scale(2) rotateX(20deg);
+    -moz-transform: scale(2) rotateX(20deg);
+    -ms-transform: scale(2) rotateX(20deg);
+    transform: scale(2) rotateX(20deg);
+    transform-origin: top;
+  }
+}
+@-moz-keyframes slide-3d-appear {
+  0% {
+    transition-property: all;
+    transition-duration: 1s;
+    -webkit-transform: scale(2) rotateX(20deg);
+    -moz-transform: scale(2) rotateX(20deg);
+    -ms-transform: scale(2) rotateX(20deg);
+    transform: scale(2) rotateX(20deg);
+    transform-origin: top;
+  }
+}
+@-webkit-keyframes slide-3d-appear {
+  0% {
+    transition-property: all;
+    transition-duration: 1s;
+    -webkit-transform: scale(2) rotateX(20deg);
+    -moz-transform: scale(2) rotateX(20deg);
+    -ms-transform: scale(2) rotateX(20deg);
+    transform: scale(2) rotateX(20deg);
+    transform-origin: top;
+  }
+}
+.reveal .backgrounds {
+  transition-property: height;
+  transition-duration: 1s;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.reveal .complex-logo {
+  min-height: 70px;
+  min-width: 70px;
+  width: 100%;
+}
+.reveal .complex-logo,
+.reveal .complex-logo svg,
+.reveal .complex-logo > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.reveal .complex-logo > div.line-icon,
+.reveal .complex-logo svg > div.line-icon,
+.reveal .complex-logo > div > div.line-icon,
+.reveal .complex-logo > div.logomark,
+.reveal .complex-logo svg > div.logomark,
+.reveal .complex-logo > div > div.logomark {
+  transform-origin: 12% 50%;
+}
+.reveal .animated .complex-logo div {
+  transition: all .5s ease;
+}
+.reveal .animated .complex-logo div.line-icon {
+  transition-delay: 2s;
+}
+.reveal .animated .complex-logo div.line-icon path {
+  transition: all 1s ease .52s;
+  stroke-dasharray: 100 ,10;
+}
+.reveal .animated .complex-logo div.event-name {
+  transition-delay: 1s;
+}
+.reveal .animated .complex-logo div.location {
+  transition-delay: 1.4s;
+}
+.reveal .future .animated .complex-logo > div {
+  transition: none;
+}
+.reveal .future .animated .complex-logo > div.line-icon path {
+  stroke-dasharray: 0 ,100;
+  transition: none;
+}
+.reveal .future .animated .complex-logo {
+  /*.line-icon{transform:rotate(30deg); opacity:0;}*/
+
+}
+.reveal .future .animated .complex-logo .logomark {
+  transform: translate(0, -20%);
+}
+.reveal .future .animated .complex-logo .location {
+  transform: translate(0, 0.5em);
+  opacity: 0;
+}
+.reveal .future .animated .complex-logo .event-name {
+  opacity: 0;
+  transform: translate(-0.6em, 0);
+}
+.reveal .lowercase {
+  text-transform: lowercase;
+}
+.reveal .pop-in.fragment {
+  -webkit-transform: scale(0.2);
+  -moz-transform: scale(0.2);
+  -ms-transform: scale(0.2);
+  transform: scale(0.2);
+  -webkit-transition: 2s ease 0.25s;
+  -moz-transition: 2s ease 0.25s;
+  -ms-transition: 2s ease 0.25s;
+  transition: 2s ease 0.25s;
+  -webkit-animation-delay: 0.66s;
+  -moz-animation-delay: 0.66s;
+  -ms-animation-delay: 0.66s;
+  animation-delay: 0.66s;
+}
+.reveal .pop-in.fragment.visible {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.reveal .pop-in.fragment.current-fragment {
+  color: #c22;
+}
+.reveal .grow-width {
+  -webkit-transition: all 0.5s ease 0.2s;
+  -moz-transition: all 0.5s ease 0.2s;
+  -o-transition: all 0.5s ease 0.2s;
+  -ms-transition: all 0.5s ease 0.2s;
+  transition: all 0.5s ease 0.2s;
+}
+.reveal .future .grow-width {
+  width: 0% !important;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+.reveal .stampit {
+  -webkit-transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+  -moz-transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+  -ms-transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+  transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+}
+.reveal .future .stampit {
+  -webkit-transform: rotate(-12deg) scale(2);
+  -moz-transform: rotate(-12deg) scale(2);
+  -ms-transform: rotate(-12deg) scale(2);
+  transform: rotate(-12deg) scale(2);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  transition: none;
+  opacity: 0;
+}
+.reveal .headshot img {
+  border-radius: 50%;
+  border: 4px solid #c00 !important;
+}
+.reveal .condensed {
+  letter-spacing: 0.02em;
+}
+.reveal .condensed li {
+  margin-bottom: 1em ;
+}
+.reveal .has-light-background .sl-block .has-dark-background > svg.redhat-logo .logotext {
+  fill: #ffffff !important;
+}
+.reveal .has-light-background .sl-block .reversed.redhat-logo .logotext,
+.reveal .has-light-background .sl-block .reversed .redhat-logo .logotext,
+.reveal .has-light-background .sl-block .has-dark-background > .redhat-logo .logotext {
+  fill: #ffffff !important;
+}
+.reveal .has-dark-background .sl-block .reversed.redhat-logo .logotext,
+.reveal .has-dark-background .sl-block .reversed .redhat-logo .logotext,
+.reveal .has-dark-background .sl-block .has-light-background > .redhat-logo .logotext {
+  fill: #000000 !important;
+}
+.reveal .has-dark-background .has-light-background .logo .only-dark path,
+.reveal .has-light-background .mono.redhat-logo path {
+  fill: #000000 !important;
+}
+.reveal .has-dark-background .mono.redhat-logo path {
+  fill: #ffffff;
+}
+.reveal .has-dark-background .logo .only-dark {
+  display: block;
+}
+.reveal .has-light-background .logo .only-light {
+  display: block;
+}
+.reveal .has-light-background .logo .only-dark {
+  display: none;
+}
+.reveal .has-dark-background .logo .only-light {
+  display: none;
+}
+.reveal .has-light-background .reversed svg path {
+  fill: #ffffff !important;
+}
+.reveal .has-dark-background .reversed svg path {
+  fill: currentcolor;
+}
+.reveal .has-dark-background .has-light-background .logo .only-light,
+.reveal .has-dark-background .reversed .logo .only-dark {
+  display: block;
+}
+.reveal .has-light-background .has-dark-background .logo .only-dark,
+.reveal .has-light-background .logo .only-light {
+  display: block;
+}
+.reveal .has-light-background .has-dark-background .redhat-logo .only-dark,
+.reveal .has-light-background .redhat-logo .only-light {
+  fill: #ffffff !important;
+}
+.reveal .has-light-background .has-dark-background .logo .only-light,
+.reveal .has-light-background .logo .only-dark,
+.reveal .has-dark-background .has-light-background .logo .only-dark,
+.reveal .has-dark-background .logo .only-light {
+  display: none;
+}
+.reveal .future .fade-up,
+.reveal .future .fade-down,
+.reveal .future .fade-left,
+.reveal .future .fade-right,
+.reveal .future .fade-zoom {
+  -webkit-transition: none;
+  transition: none;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-up,
+.reveal .fade-up.fragment {
+  -webkit-transform: translate(0, 2em);
+  -ms-transform: translate(0, 2em);
+  transform: translate(0, 2em);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-down,
+.reveal .fade-down.fragment {
+  -webkit-transform: translate(0, -2em);
+  -ms-transform: translate(0, -2em);
+  transform: translate(0, -2em);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-left,
+.reveal .fade-left.fragment {
+  -webkit-transform: translate(2em, 0);
+  -ms-transform: translate(2em, 0);
+  transform: translate(2em, 0);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-right,
+.reveal .fade-right.fragment {
+  -webkit-transform: translate(-2em, 0);
+  -ms-transform: translate(-2em, 0);
+  transform: translate(-2em, 0);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-zoom,
+.reveal .fade-zoom.fragment {
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .present .fade-up,
+.reveal .present .fade-down,
+.reveal .present .fade-left,
+.reveal .present .fade-right,
+.reveal .present .fade-zoom {
+  -webkit-transition: all .5s ease .5s;
+  transition: all .5s ease .5s;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.reveal .present .fragment.visible.fade-up,
+.reveal .present .fragment.visible.fade-down,
+.reveal .present .fragment.visible.fade-left,
+.reveal .present .fragment.visible.fade-right,
+.reveal .present .fragment.visible.fade-zoom {
+  -webkit-transform: none ;
+  -ms-transform: none ;
+  transform: none ;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.reveal .sl-block {
+  font-family: Overpass, "Hiragino Kaku Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Overpass, sans-serif !important;
+}
+.reveal .has-light-background .icon.stroked {
+  color: currentcolor;
+}
+.reveal .has-dark-background .icon.stroked path {
+  stroke: currentcolor;
+}
+.reveal .has-dark-background .only-light-background {
+  display: none !important;
+}
+.reveal .has-dark-background .only-dark-background {
+  display: block !important;
+}
+.reveal .has-light-background svg {
+  color: #5e6a71;
+}
+.reveal a.call-to-action:hover {
+  background-color: #d00 !important;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.05) !important;
+  text-shadow: none !important;
+}
+.reveal .sl-block[data-block-type="snippet"] table {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.reveal .sl-block[data-block-type="snippet"] table td {
+  border-color: currentcolor !important;
+}
+.reveal .sl-block[data-block-type="snippet"] table td {
+  text-align: inherit !important;
+}
+.reveal .sl-block[data-block-type="text"] table {
+  width: 100%;
+}
+.reveal .sl-block[data-block-type="text"] table td {
+  border-color: currentcolor;
+}
+.reveal .sl-block[data-block-type="text"] table td {
+  text-align: inherit;
+}
+@keyframes tease {
+  0% {
+    bottom: -1.2em;
+    opacity: .3;
+  }
+  35% {
+    bottom: -1.2em;
+    opacity: 0.3;
+  }
+  45% {
+    bottom: -0.5em;
+    opacity: 1;
+  }
+  50% {
+    bottom: -1.2em;
+    opacity: 0.3;
+  }
+  100% {
+    bottom: -1.2em;
+    opacity: .3;
+  }
+}
+.reveal.reveal .sl-block[data-block-type="image"] .person {
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px , inset 0 0 0 1px ;
+  position: relative !important;
+  background-color: currentcolor;
+  height: auto !important;
+}
+.reveal.reveal .sl-block[data-block-type="image"] .person:before {
+  content: "" !important;
+  display: block !important;
+  padding-top: 100% ;
+  position: relative !important ;
+  /* 4:3 aspect ratio */
+
+}
+.reveal.reveal .sl-block[data-block-type="image"] .person > img {
+  position: absolute ;
+  margin: 0 auto !important;
+  left: 0% ;
+  right: 0 ;
+  width: auto !important;
+  top: 0  ;
+  bottom: 0 ;
+  -webkit-filter: grayscale(100%) contrast(80%) brightness(115%);
+  -moz-filter: grayscale(100%) contrast(80%) brightness(115%);
+  filter: grayscale(100%) contrast(80%) brightness(115%);
+}
+.reveal.reveal .speaker-notes {
+  transition: 0  ;
+  bottom: -0.75em;
+  font-family: overpass, sans-serif;
+  letter-spacing: .0352em;
+  padding: 0;
+  max-height: 1em ;
+  background-color: transparent;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0);
+  opacity: .5;
+  padding: 1em 2em 1.5em 2em;
+  animation: tease 15s infinite ;
+}
+.reveal.reveal .speaker-notes:hover,
+.reveal.reveal:hover .speaker-notes {
+  transition: all .2s ease;
+  bottom: 0  !important;
+  animation: 0;
+  opacity: 1 !important;
+  cursor: default;
+  max-height: 100% !important;
+  transition: 0;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2) !important;
+}
+.reveal.reveal.has-light-background > .speaker-notes {
+  color: white ;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.reveal.reveal.has-light-background > .speaker-notes:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.reveal.reveal.has-dark-background > .speaker-notes {
+  color: black ;
+  background-color: white;
+}
+.reveal.reveal.has-dark-background > .speaker-notes:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.reveal .present .delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal .present .delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal .present .delay-3 {
+  transition-delay: 0.3s;
+}
+.reveal .present .delay-4 {
+  transition-delay: 0.4s;
+}
+.reveal .present .delay-5 {
+  transition-delay: 0.5s;
+}
+.reveal .present .delay-6 {
+  transition-delay: 0.6s;
+}
+.reveal .present .delay-7 {
+  transition-delay: 0.7s;
+}
+.reveal .present .delay-8 {
+  transition-delay: 0.8s;
+}
+.reveal .present .delay-9 {
+  transition-delay: 0.9s;
+}
+.reveal .present .delay-10 {
+  transition-delay: 1s;
+}
+.reveal .present .delay-11 {
+  transition-delay: 1.1s;
+}
+.reveal .present .delay-12 {
+  transition-delay: 1.2s;
+}
+.reveal .present .delay-13 {
+  transition-delay: 1.3s;
+}
+.reveal .present .delay-14 {
+  transition-delay: 1.4s;
+}
+.reveal .present .delay-15 {
+  transition-delay: 1.5s;
+}
+.reveal .present .delay-16 {
+  transition-delay: 1.6s;
+}
+.reveal .present .delay-17 {
+  transition-delay: 1.7s;
+}
+.reveal .present .delay-18 {
+  transition-delay: 1.8s;
+}
+.reveal .present .delay-19 {
+  transition-delay: 1.9s;
+}
+.reveal .present .delay-20 {
+  transition-delay: 2s;
+}
+.reveal .present .delay-21 {
+  transition-delay: 2.1s;
+}
+.reveal .present .delay-22 {
+  transition-delay: 2.2s;
+}
+.reveal .present .delay-23 {
+  transition-delay: 2.3s;
+}
+.reveal .present .delay-24 {
+  transition-delay: 2.4s;
+}
+.reveal .present .delay-25 {
+  transition-delay: 2.5s;
+}
+.reveal .present .delay-26 {
+  transition-delay: 2.6s;
+}
+.reveal .present .delay-27 {
+  transition-delay: 2.7s;
+}
+.reveal .present .delay-28 {
+  transition-delay: 2.8s;
+}
+.reveal .present .delay-29 {
+  transition-delay: 2.9s;
+}
+.reveal .present .delay-30 {
+  transition-delay: 3s;
+}
+.reveal .present .delay-31 {
+  transition-delay: 3.1s;
+}
+.reveal .present .delay-32 {
+  transition-delay: 3.2s;
+}
+.reveal .present .delay-33 {
+  transition-delay: 3.3s;
+}
+.reveal .present .delay-34 {
+  transition-delay: 3.4s;
+}
+.reveal .present .delay-35 {
+  transition-delay: 3.5s;
+}
+.reveal .present .delay-36 {
+  transition-delay: 3.6s;
+}
+.reveal .present .delay-37 {
+  transition-delay: 3.7s;
+}
+.reveal .present .delay-38 {
+  transition-delay: 3.8s;
+}
+.reveal .present .delay-39 {
+  transition-delay: 3.9s;
+}
+.reveal .present .delay-40 {
+  transition-delay: 4s;
+}
+.reveal .light-foreground .sl-block * {
+  color: #fff;
+}
+.reveal .dark-foreground .sl-block * {
+  color: #000;
+}
+.reveal .has-dark-background .invert {
+  color: #000;
+}
+.reveal .has-light-background .invert * {
+  color: #fff ;
+}
+.reveal .has-light-background .invert .only-light-background {
+  display: none ;
+}
+.reveal .has-light-background .invert .only-dark-background {
+  display: block !important;
+}
+.reveal .has-dark-background .invert .only-light-background {
+  display: block !important ;
+}
+.reveal .has-dark-background .invert .only-dark-background {
+  display: none !important;
+}
+.reveal .slide-number {
+  position: absolute !important;
+  opacity: 1;
+  right: 1em;
+  height: 28px;
+  min-width: 28px;
+  bottom: auto;
+  left: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 28px;
+  line-height: 28px;
+  color: white;
+  text-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.4);
+  top: 1em;
+  font-family: "Overpass 2", Overpass, sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 4px;
+  box-sizing: content-box;
+}
+.reveal .slide-number-delimiter {
+  margin: 0 1px;
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-overpass theme-color-no-color">
+		<div class="reveal">
+			<div class="slides">
+				<section class="has-light-background" data-id="734385ac59746533cf6899a548fae5c5"><div data-block-id="dc965690d873ece5bdcf525729069e5d" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Hawkular Powers</h1>
+</div></div>
+<div data-block-id="298c9319529584c616f3c6e57fb753e3" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 250px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle">
+<h2>Le Dev au pistolet d'Ops</h2>
+</div></div></section><section class="has-light-background" data-id="b2593cd554d9644f47ec229c38efa10c"><div data-block-id="97ad93e1c926b0d826541a9c68319c4e" class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Présentation</h2>
+</div></div>
+<div data-block-id="7a4b04422ee92b077d6c156c85e05f8f" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 203px; height: auto;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
+<ul>
+	<li>
+	<p><span style="font-size:32px">@Marseille</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:32px">Développeur @ Red Hat</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:32px">tsegismont @ GitHub / Twitter / GMail / Freenode</span></p>
+	</li>
+</ul>
+</div></div>
+<div data-block-id="a9d361e0da5f7e69dd568fd234d83d00" class="sl-block" data-block-type="image" style="width: 179.359px; height: 179px; left: 711px; top: 459px;"><div style="z-index: 12;" class="sl-block-content"><img data-src="hawkular-powers-dev-pistolet-ops/1405730-tsegismont.png" data-natural-height="499" data-natural-width="500" style=""></div></div>
+<div data-block-id="a9b6b9e787515613e9a5181f7c9d78c5" style="min-width: 30px; min-height: 30px; width: 82px; height: 82px; left: 459px; top: 377px;" data-block-type="image" class="sl-block"><div style="z-index: 14;" class="sl-block-content"><img data-src="hawkular-powers-dev-pistolet-ops/1405788-googlemail-128.png" data-natural-height="128" data-natural-width="128" style=""></div></div>
+<div data-block-id="150c3418f59eea462a26e97422196ae2" style="min-width: 30px; min-height: 30px; width: 100.86px; height: 82px; left: 299px; top: 548px;" data-block-type="image" class="sl-block"><div style="z-index: 15;" class="sl-block-content"><img data-src="hawkular-powers-dev-pistolet-ops/1405803-Twitter_logo_blue.png" data-natural-height="900" data-natural-width="1107" style=""></div></div>
+<div data-block-id="f692dba92441bdcc54606e4e5908c0c3" style="min-width: 30px; min-height: 30px; width: 82px; height: 82px; left: 80px; top: 453px;" data-block-type="image" class="sl-block"><div style="z-index: 16;" class="sl-block-content"><img data-src="hawkular-powers-dev-pistolet-ops/1405808-GitHub-Mark-120px-plus.png" data-natural-height="120" data-natural-width="120" style=""></div></div>
+<div data-block-id="dd3a71a94a0f914af4f6c973b4fcaf57" style="min-width: 30px; min-height: 30px; width: 242.667px; height: 91px; left: 692px; top: 65px;" data-block-type="image" class="sl-block"><div data-inline-svg="true" style="z-index: 17;" class="sl-block-content">
+<img data-src="hawkular-powers-dev-pistolet-ops/1305928-redhat-logo-.svg" data-natural-height="120" data-natural-width="320" style="display: none;"><svg preserveaspectratio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 494 180" height="120" width="320" class="redhat-logo">
+<path d="m 491.6,118.6 c 0,1.8 -1.5,3.3 -3.3,3.3 -1.8,0 -3.3,-1.5 -3.3,-3.3 0,-1.8 1.5,-3.3 3.3,-3.3 1.8,0 3.3,1.5 3.3,3.3 z m 0.7,0 c 0,-2.2 -1.8,-4 -4,-4 -2.2,0 -4,1.8 -4,4 0,2.2 1.8,4 4,4 2.2,0 4,-1.8 4,-4 m -4,-0.2 c 0.6,0 1,-0.1 1,-0.7 0,-0.5 -0.4,-0.6 -0.9,-0.6 l -0.8,0 0,1.3 z m -0.7,0.5 0,1.8 -0.6,0 0,-4.1 1.5,0 c 1,0 1.5,0.3 1.5,1.1 0,0.8 -0.5,1.1 -1.1,1.2 l 1.2,1.8 -0.7,0 -1.1,-1.8 -0.7,0 m -22.2,-63.12 -5.3,1.97 0,9.94 -9.1,0 0,4.34 9.1,0 0,34.17 c 0,5.5 0.8,10.1 3.3,12.9 2.1,2.6 5.4,3.9 9.3,3.9 3.3,0 5.7,-0.6 7.5,-1.3 l -0.7,-4.2 c -1.4,0.5 -3.3,0.9 -6.1,0.9 -5.8,0 -8,-4.3 -8,-11.2 l 0,-35.17 15.4,0 0,-4.34 -15.4,0 0,-11.91 m -26.6,48.72 c 0,0.9 -0.2,2.1 -0.6,3.2 -1.8,5.3 -7,10.9 -16,10.9 -5.6,0 -10.7,-3.5 -10.7,-11.3 0,-12.98 15.5,-14.77 27.3,-14.43 z m 5.3,4.4 0,-21.06 c 0,-9.67 -3,-21.38 -18.6,-21.38 -4.9,0 -10.9,1.32 -15.8,4.67 l 1.7,3.89 c 3.9,-2.76 8.8,-4.03 13.5,-4.03 12.8,-0.1 13.9,10.59 13.9,15.94 l 0,1.44 c -22,-0.23 -33,7.29 -33,19.73 0,7.3 5,14.9 15.9,14.9 8.6,0 14.6,-4.8 17.2,-9 l 0.3,0 0.8,7.8 4.9,0 c -0.6,-4.2 -0.8,-8.6 -0.8,-12.9 M 377.3,66.46 c 5.2,0 18.8,2.56 18.8,22.7 l 0,32.64 -5.3,0 0,-32.05 c 0,-9.74 -3.8,-18.62 -14.9,-18.62 -7.7,0 -14,5.52 -16.3,12.25 -0.6,1.6 -0.8,3.13 -0.8,5.33 l 0,33.09 -5.3,0 0,-71.31 5.3,1.58 0,25.29 0.3,0 c 1.5,-3.01 4.1,-5.92 7.3,-7.8 3.1,-1.91 6.8,-3.1 10.9,-3.1 m -36.1,40.14 c 0,5.6 0.2,11.5 0.5,15.2 l -12.2,0 -0.6,-8.6 -0.3,0 c -3.2,6.1 -9.7,9.8 -17.5,9.8 -12.9,0 -23.1,-11 -23.1,-27.62 -0.1,-18.11 11.2,-28.86 24.2,-28.86 7.4,0 12.7,3.05 15.1,7.04 l 0.3,0 0,-30.48 13.6,3.85 z m -13.6,-8.25 0,-8.1 c 0,-1.09 -0.1,-2.46 -0.3,-3.57 -1.3,-5.26 -5.7,-9.59 -11.8,-9.59 -8.8,0 -13.7,7.76 -13.7,17.79 0,9.92 4.9,17.22 13.5,17.22 5.6,0 10.5,-3.9 11.8,-9.8 0.4,-1.2 0.5,-2.52 0.5,-3.95 m -81.9,-9.43 c 0.6,-5.54 4.1,-13.17 12.5,-13.17 9.2,0 11.3,8.16 11.3,13.17 z m 0,9.51 36.2,0.1 c 0.2,-1.26 0.5,-3.3 0.5,-5.83 0,-11.83 -5.8,-26.28 -23.3,-26.28 -17.4,0 -26.5,14.11 -26.5,29.02 0,16.56 10.3,27.36 27.9,27.36 7.8,0 14.2,-1.4 18.8,-3.4 l -2,-9.4 c -4.1,1.5 -8.6,2.5 -14.9,2.5 -8.7,0 -16.3,-4.3 -16.7,-14.07 m -46.8,-13.33 -0.1,36.7 13.7,0 0,-28.05 c 0,-1.47 0.1,-2.92 0.4,-4.12 1.2,-6.19 5.7,-10.33 12.2,-10.33 1.7,0 2.8,0.13 4.1,0.38 l 0,-12.87 c -1.1,-0.29 -1.8,-0.29 -3.2,-0.29 -5.8,0 -12.1,3.88 -14.8,11.48 l -0.4,0 -0.5,-10.26 -11.8,0 c 0.3,4.81 0.4,10.13 0.4,17.36 m -37,33.5 c 0,1.8 -1.4,3.3 -3.2,3.3 -1.8,0 -3.3,-1.5 -3.3,-3.3 0,-1.8 1.5,-3.3 3.3,-3.3 1.8,0 3.2,1.5 3.2,3.3 z m 0.8,0 c 0,-2.2 -1.8,-4 -4,-4 -2.2,0 -4,1.8 -4,4 0,2.2 1.8,4 4,4 2.2,0 4,-1.8 4,-4 m -4,-0.2 c 0.5,0 1,-0.1 1,-0.7 0,-0.5 -0.5,-0.6 -0.9,-0.6 l -0.9,0 0,1.3 z m -0.8,0.5 0,1.8 -0.6,0 0,-4.1 1.6,0 c 0.9,0 1.4,0.3 1.4,1.1 0,0.8 -0.4,1.1 -1,1.2 l 1.1,1.8 -0.7,0 -1,-1.8 -0.8,0" style="" class="logotext"></path>
+<path d="M146.083 123.002c-3.04-.697-6.264-1.138-9.526-1.138-5.579 0-10.655.965-14.398 2.527-.413.204-.706.636-.706 1.125 0 .181.045.361.113.515.443 1.281-.284 2.671-3.908 3.469-5.372 1.181-8.764 6.725-10.704 8.565-2.279 2.165-8.716 3.493-7.747 2.203.758-1.006 3.654-4.154 5.416-7.553 1.576-3.04 2.979-3.904 4.912-6.805.566-.848 2.765-3.837 3.405-6.201.718-2.305.476-5.203.751-6.393.396-1.721 2.018-5.451 2.14-7.556.071-1.193-4.974 1.7-7.367 1.7-2.392 0-4.724-1.436-6.862-1.538-2.647-.122-4.347 2.043-6.742 1.664-1.366-.219-2.518-1.425-4.908-1.513-3.402-.124-7.56 1.892-15.368 1.641-7.68-.251-14.775-9.708-15.743-11.212-1.135-1.763-2.521-1.763-4.03-.375-1.513 1.384-3.375.295-3.905-.635-1.007-1.76-3.701-6.912-7.873-7.993-5.769-1.495-8.69 3.193-8.31 6.925.385 3.788 2.833 4.85 3.967 6.863 1.132 2.015 1.712 3.312 3.846 4.203 1.511.634 2.074 1.564 1.625 2.807-.395 1.08-1.968 1.327-3.002 1.378-2.198.105-3.739-.492-4.862-1.208-1.307-.836-2.37-1.992-3.51-3.955-1.32-2.168-3.398-3.113-5.82-3.113-1.154 0-2.234.304-3.193.798-3.794 1.978-8.312 3.144-13.175 3.144l-5.484.005c10.518 31.194 40.013 53.656 74.756 53.656 27.752 0 52.156-14.331 66.214-36.001" style="fill:white" class="face"></path>
+<path d="m 96.89,115.8 c -1.02,1.2 -1.46,1.6 -2.2,2.2 -1.78,1.4 -3.81,-0.2 -5.11,-1 -2.9,-1.7 -5.23,-0.6 -5.8,0.7 -0.57,1.3 0.1,2.9 1.64,2.7 2.21,-0.3 2.31,0.1 3.9,1.1 2.98,1.9 5.15,0.8 6.26,-0.1 0.92,-0.7 1.43,-1.3 1.91,-2.2 0.86,-1.7 0.16,-3 -0.25,-3.4 -0.1,-0.1 -0.25,-0.1 -0.35,0 z m 49.21,7.2 c 8,-12.3 12.6,-27.06 12.6,-42.87 C 158.7,36.57 123.4,1.262 79.88,1.262 36.32,1.262 1.003,36.57 1.003,80.13 c 0,8.82 1.447,17.3 4.116,25.17 l 5.481,0 c 4.87,0 9.38,-1.1 13.18,-3.1 0.96,-0.5 2.04,-0.8 3.19,-0.8 2.42,0 4.5,0.9 5.82,3.1 1.14,2 2.2,3.1 3.51,4 1.12,0.7 2.66,1.3 4.86,1.2 1.04,-0.1 2.61,-0.3 3,-1.4 0.45,-1.2 -0.11,-2.2 -1.62,-2.8 -2.13,-0.9 -2.71,-2.2 -3.85,-4.2 -1.13,-2.03 -3.58,-3.09 -3.96,-6.88 -0.38,-3.73 2.54,-8.42 8.31,-6.92 4.17,1.08 6.86,6.23 7.87,8 0.53,0.92 2.39,2.01 3.9,0.63 1.51,-1.39 2.9,-1.39 4.03,0.38 0.97,1.5 8.07,10.99 15.75,11.19 7.81,0.3 11.96,-1.7 15.37,-1.6 2.39,0.1 3.54,1.3 4.9,1.5 2.4,0.4 4.1,-1.8 6.74,-1.7 2.1,0.1 4.5,1.6 6.9,1.6 2.4,0 7.4,-2.9 7.3,-1.7 -0.1,2.1 -1.7,5.8 -2.1,7.5 -0.3,1.2 0,4.1 -0.8,6.4 -0.6,2.4 -2.8,5.4 -3.4,6.2 -1.9,2.9 -3.3,3.8 -4.9,6.8 -1.7,3.4 -4.63,6.6 -5.39,7.6 -0.97,1.3 5.49,-0.1 7.79,-2.2 1.9,-1.9 5.3,-7.4 10.7,-8.6 3.6,-0.8 4.3,-2.2 3.9,-3.5 -0.1,-0.1 -0.1,-0.3 -0.1,-0.5 0,-0.5 0.2,-0.9 0.7,-1.1 3.7,-1.6 8.8,-2.5 14.4,-2.5 3.2,0 6.9,0.5 9.5,1.1 z" style="fill:black" class="black-circle"></path>
+<path d="m 117.6,67.65 c -0.8,0.37 -1,-0.24 -0.7,-0.8 1.9,-3.17 2.2,-3.97 2.7,-5.22 0.8,-1.83 1.2,-4.43 -0.3,-9.85 -3,-10.67 -9.2,-24.94 -13.7,-29.57 -4.3,-4.47 -12.18,-5.72 -19.28,-3.9 -2.62,0.67 -7.74,3.33 -17.24,1.19 -16.44,-3.7 -18.88,4.53 -19.82,8.12 -0.95,3.59 -3.21,13.78 -3.21,13.78 -0.76,4.15 -1.74,11.37 23.78,16.23 11.9,2.26 12.5,5.34 13.02,7.55 0.95,3.96 2.46,6.23 4.16,7.36 1.69,1.14 0,2.07 -1.89,2.27 C 80.06,75.33 61.34,69.96 50.27,63.67 41.21,58.13 41.05,53.15 43.13,48.92 29.44,47.44 19.17,50.2 17.31,56.68 14.11,67.8 41.75,86.79 73.23,96.32 106.3,106.3 140.2,99.34 144,78.58 c 1.7,-9.43 -6.2,-16.41 -19.6,-19.43 -1.3,4.87 -3.9,6.93 -6.8,8.5 z M 83.26,23.76 c -0.38,0.1 -0.4,-0.31 -0.11,-0.45 1.8,-0.88 4.4,-1.68 7.42,-1.98 1.11,-0.11 2.1,-0.17 3.09,-0.15 5.06,0.1 9.14,2.13 9.04,4.49 -0.1,2.36 -4.2,4.19 -9.26,4.07 -1.63,0 -3.17,-0.27 -4.49,-0.65 -0.16,0 -0.27,-0.18 -0.27,-0.33 0,-0.16 0.11,-0.3 0.27,-0.34 3.15,-0.73 5.28,-1.92 5.13,-3.05 -0.2,-1.49 -4.32,-2.3 -9.21,-1.81 -0.54,0.1 -1.33,0.17 -1.61,0.2 z m -4.87,12.67 c -0.14,-1.25 -2.77,-2.71 -6.67,-2.71 -3.84,0 -6.6,0.5 -8.99,0.56 -2.39,0.1 -4.24,-1.69 -5.1,-2.76 -0.71,-0.88 -2.97,-1.73 -4.2,1.1 -1.24,2.86 1.07,5.93 2.97,6.33 0,0 3.17,5.89 5.57,3.33 1.71,-1.82 2.65,-2.8 11.76,-3.46 4.35,-0.32 4.79,-1.32 4.66,-2.39 z" style="fill:#c00" class="hat"></path>
+</svg>
+</div></div></section><section class="has-light-background" data-id="2a2c555d35a43b6051fb80c96319e3fa"><div data-block-id="3c95c317286e89dab148d2c189e17cd8" class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Programme</h2>
+</div></div>
+<div data-block-id="f54e41f36aaa53dd22dcaf0c323cc2f9" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
+<ul>
+	<li>
+	<p><span style="font-size:32px">Monitoring?</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:32px">Hawkular</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:32px">Hawkular Metrics</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:32px">Hawkular Charts</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background" data-id="8c37d88fbb4f21e602f39bd4b72d9338"><div data-block-id="2ba8adb5ccf9c24cf9bf096c631a1909" class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>A quoi ça Sert ?</h2>
+</div></div>
+<div data-block-id="d73f0a068041ba12f49d3e3447c8f6b2" class="sl-block" data-block-type="image" style="width: 615.205px; height: 526px; left: 213.795px; top: 155px;"><div data-fragment-index="0" class="sl-block-content fragment"><img data-src="hawkular-powers-dev-pistolet-ops/1408915-taupe-lunettes.jpg" data-natural-height="342" data-natural-width="400" style=""></div></div></section><section class="has-light-background" data-id="aee583c706539b0f2f5fe9186722ac2c"><div data-block-id="c2eae99985e544e2aa57c795dfe6673b" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Mesurer</h2>
+</div></div>
+<div data-block-id="f082fc2724cc51e03057d4f8dd5705dd" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
+<ul>
+	<li data-fragment-index="0" class="fragment">
+	<p><span style="font-size:32px">Observer</span></p>
+	</li>
+	<li data-fragment-index="1" class="fragment">
+	<p><span style="font-size:32px">Comprendre</span></p>
+	</li>
+	<li data-fragment-index="2" class="fragment">
+	<p><span style="font-size:32px">Décider</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background" data-id="d24786a6b25beba3b97df7e4455ccb7b"><div data-block-id="93c0efe7b8aacaa552a7fe2bd5786972" class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>En pratique</h2>
+</div></div>
+<div data-block-id="ee9cd97b33f104dd35d69a539b321961" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li data-fragment-index="0" class="fragment">
+	<p><span style="font-size:32px">Réseau</span></p>
+	</li>
+	<li data-fragment-index="1" class="fragment">
+	<p><span style="font-size:32px">Système</span></p>
+	</li>
+	<li data-fragment-index="2" class="fragment">
+	<p><span style="font-size:32px">Middleware</span></p>
+	</li>
+	<li data-fragment-index="3" class="fragment">
+	<p><span style="font-size:32px">Applications</span></p>
+	</li>
+	<li data-fragment-index="4" class="fragment">
+	<p><span style="font-size:32px">IoT</span></p>
+	</li>
+	<li data-fragment-index="5" class="fragment">
+	<p><span style="font-size:32px">Tests de charge</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background" data-id="aa3abe06def51b6b74a3efcafba88fb6"><div data-block-id="499a0d7da304c00bbbe0c51358ccd358" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Comment ça marche?</h2>
+</div></div>
+
+
+
+
+
+<div data-block-id="dddcd321c41b75719e3c87403585d46e" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 240px; top: 230px;" data-block-type="image" class="sl-block"><div data-fragment-index="1" data-inline-svg="true" style="z-index: 11;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273628-gears.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-gears " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 103.4,48.6 c -0.5,-0.8 -1.1,-1.5 -1.7,-2.1 l 2.1,-5.1 c -1.2,-0.8 -2.4,-1.4 -3.7,-2 l -3,4.8 c -1.8,-0.4 -3.7,-0.4 -5.4,0.2 L 88.2,40 c -1.2,0.6 -2.4,1.4 -3.5,2.2 l 2.6,5 c -1.3,1.4 -2.1,3 -2.5,4.8 l -5.5,0.8 c -0.1,1.4 0,2.8 0.1,4.2 l 5.7,0.2 c 0.2,0.8 0.6,1.7 1.1,2.5 0.5,0.8 1.1,1.4 1.8,2 l -2.2,5.2 c 1.2,0.8 2.5,1.4 3.8,2 l 3,-4.8 c 1.7,0.4 3.6,0.3 5.4,-0.2 l 3.4,4.4 c 1.3,-0.6 2.4,-1.4 3.6,-2.2 l -2.7,-5 c 1.3,-1.4 2.2,-3.1 2.5,-4.8 l 5.6,-0.8 c 0.1,-1.4 0,-2.8 -0.2,-4.2 l -5.6,-0.2 c -0.3,-0.8 -0.6,-1.7 -1.2,-2.5 z M 89.8,96.2 c 0.1,-1.4 0.1,-2.9 0,-4.3 l -5.6,-0.4 c -0.4,-2 -1.1,-3.8 -2.2,-5.4 l 3.6,-4.3 c -0.9,-1.1 -1.9,-2.1 -3,-3 l -4.3,3.6 c -1.6,-1.1 -3.4,-1.8 -5.4,-2.2 l -0.5,-5.6 c -1.4,-0.1 -2.8,-0.1 -4.2,0 l -0.5,5.6 c -1.9,0.4 -3.8,1.1 -5.3,2.2 l -4.3,-3.6 c -1.1,0.9 -2.1,1.9 -3,3 l 3.6,4.3 c -1.1,1.6 -1.9,3.4 -2.2,5.4 l -5.6,0.4 c -0.2,1.4 -0.2,2.9 0,4.3 l 5.6,0.4 c 0.3,2 1.1,3.8 2.2,5.4 l -3.6,4.3 c 0.9,1.1 1.9,2.1 3,3 l 4.3,-3.6 c 1.5,1.1 3.4,1.8 5.3,2.2 l 0.5,5.6 c 1.4,0.1 2.8,0.1 4.2,0 l 0.5,-5.6 c 2,-0.4 3.8,-1.1 5.4,-2.2 l 4.3,3.6 c 1.1,-0.9 2.1,-1.9 3,-3 L 82,102 c 1.1,-1.6 1.8,-3.4 2.2,-5.4 l 5.6,-0.4 z M 78.3,55.4 c 0,-0.9 -0.1,-1.7 -0.2,-2.6 l 5.3,-1.9 c -0.2,-1.4 -0.6,-2.8 -1,-4.1 l -5.6,1 C 76.1,46.2 75.2,44.7 74.2,43.4 L 77.8,39 c -0.9,-1.1 -1.9,-2.1 -2.9,-3 l -4.4,3.7 C 69.1,38.6 67.7,37.8 66,37.1 l 1,-5.6 C 65.7,31 64.4,30.7 63,30.4 l -2,5.4 c -0.8,-0.1 -1.7,-0.2 -2.5,-0.2 -0.9,0 -1.8,0.1 -2.6,0.2 L 54,30.4 c -1.5,0.3 -2.8,0.6 -4.1,1.1 l 1,5.6 c -1.6,0.7 -3.1,1.5 -4.5,2.6 L 42.1,36 c -1.1,0.9 -2.1,1.9 -3,3 l 3.6,4.4 c -1,1.3 -1.9,2.8 -2.5,4.4 l -5.6,-1 c -0.5,1.3 -0.9,2.7 -1.1,4.1 l 5.3,1.9 c -0.1,0.9 -0.2,1.7 -0.2,2.6 0,0.9 0.1,1.7 0.2,2.6 l -5.3,1.9 c 0.2,1.4 0.6,2.8 1.1,4.1 l 5.6,-1 c 0.6,1.6 1.5,3.1 2.5,4.4 l -3.6,4.4 c 0.9,1.1 1.9,2.1 3,3 l 4.3,-3.7 c 1.4,1.1 2.9,1.9 4.5,2.6 l -1,5.6 c 1.3,0.5 2.6,0.8 4,1.1 l 2,-5.4 c 0.8,0.1 1.7,0.2 2.6,0.2 0.8,0 1.7,-0.1 2.5,-0.2 l 2,5.4 c 1.4,-0.3 2.7,-0.6 4,-1.1 l -1,-5.6 c 1.7,-0.7 3.1,-1.5 4.5,-2.6 l 4.4,3.7 c 1,-0.9 2,-1.9 2.9,-3 l -3.6,-4.4 c 1,-1.3 1.9,-2.8 2.6,-4.4 l 5.6,1 c 0.4,-1.3 0.8,-2.7 1,-4.1 L 78.1,58 c 0.1,-0.9 0.2,-1.7 0.2,-2.6 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 77.1,100.2 c -1.7,1.8 -4.1,3 -6.8,3 -5,0 -9.1,-4.1 -9.1,-9.1 0,-5.1 4.1,-9.2 9.1,-9.2 5.1,0 9.1,4.1 9.1,9.2 0,0.6 0,1.2 -0.1,1.8 m -24.2,-49 c 1,-0.4 2.2,-0.6 3.4,-0.6 5,0 9.1,4.1 9.1,9.1 0,5 -4.1,9.1 -9.1,9.1 -5.1,0 -9.2,-4.1 -9.2,-9.1 0,-1.8 0.6,-3.6 1.5,-5 m 24.1,43.7 c 0,2.6 -2,4.6 -4.6,4.6 -2.6,0 -4.6,-2 -4.6,-4.6 0,-2.6 2,-4.6 4.6,-4.6 2.6,0 4.6,2 4.6,4.6 z m 24.5,-40 c 0,2.6 -2,4.6 -4.6,4.6 -2.6,0 -4.6,-2 -4.6,-4.6 0,-2.6 2,-4.6 4.6,-4.6 2.6,0 4.6,2 4.6,4.6 z m -36.3,1.3 c 0,2.6 -2,4.6 -4.6,4.6 -2.6,0 -4.6,-2 -4.6,-4.6 0,-2.6 2,-4.6 4.6,-4.6 2.6,0 4.6,2 4.6,4.6 z" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="55c6eaa1428f76e36ebf2d6811419e1d" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 0px; top: 230px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 12;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273605-community.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-community" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 86.5,64.67 c 0,10.12 -8.21,18.34 -18.33,18.34 -10.12,0 -18.33,-8.22 -18.33,-18.34 0,-10.12 8.21,-18.34 18.33,-18.34 10.12,0 18.33,8.22 18.33,18.34 z m -48.9,23.3 c 0,2.85 2.31,5.16 5.15,5.16 2.86,0 5.16,-2.31 5.16,-5.16 0,-2.85 -2.3,-5.16 -5.16,-5.16 -2.84,0 -5.15,2.31 -5.15,5.16 z m -7.1,-47.2 c 0,-3.57 2.9,-6.46 6.48,-6.46 3.56,0 6.47,2.89 6.47,6.46 0,3.58 -2.91,6.48 -6.47,6.48 -3.58,0 -6.48,-2.9 -6.48,-6.48 z m 64.2,65.63 c 0,5.2 -4.26,9.5 -9.51,9.5 -5.25,0 -9.5,-4.3 -9.5,-9.5 0,-5.3 4.25,-9.54 9.5,-9.54 5.25,0 9.51,4.24 9.51,9.54 z m 18.8,-33.73 c 0,3.6 -2.9,6.53 -6.5,6.53 -3.7,0 -6.6,-2.93 -6.6,-6.53 0,-3.61 2.9,-6.54 6.6,-6.54 3.6,0 6.5,2.93 6.5,6.54 z M 92.1,32.86 c 0,2.64 -2.13,4.75 -4.75,4.75 -2.62,0 -4.75,-2.11 -4.75,-4.75 0,-2.63 2.13,-4.75 4.75,-4.75 2.62,0 4.75,2.12 4.75,4.75 z m -36.6,44.51 -8.75,7.45 m 29.46,-3.64 5.84,16.14 m 4.55,-28.85 14.1,2.48 M 85.6,37.36 77.79,49.01 m -36.01,-4.06 11.23,9.32" class="long" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="6f7518e3372719ccf51e2f46a49a948b" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 480px; top: 230px;" data-block-type="image" class="sl-block"><div data-fragment-index="2" data-inline-svg="true" style="z-index: 13;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273663-storage.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-storage " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 98.07,79.59 c 0,3.8 -11.6,6.8 -26.06,6.8 -14.45,0 -26.08,-3 -26.08,-6.8 l 0,-15.12 c 0,-3.83 11.67,-6.87 26.04,-6.87 14.36,0 26.04,3.04 26.09,6.87 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 57.3,69.98 c -3.17,-0.56 -5.84,-1.3 -7.8,-2.16 m 44.13,0.54 c -10.32,2.86 -19.89,3.02 -29.79,2.4" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="5e021233335b5d931a83b562c5de0d57" style="min-width: 30px; min-height: 30px; width: 80px; height: 80px; left: 200px; top: 310px;" data-block-type="image" class="sl-block"><div data-fragment-index="1" data-inline-svg="true" style="z-index: 14;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273698-arrow-right.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-arrow icon-arrow-right" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="m 15.71,52.41 60.48,0 -2.9,-19.39 c -0.48,-4.33 2.9,-4.66 5.44,-2.08 L 128.3,71.98 78.73,113.1 c -2.54,2.6 -5.92,2.3 -5.44,-2.1 l 2.9,-19.44 -60.48,0" class="long" stroke-width="2px" stroke="#666" fill="none"></path> </svg>
+</div></div>
+<div data-block-id="411aa935ab5c9bf7cb8287ae51ff6f8b" style="min-width: 30px; min-height: 30px; width: 88px; height: 88px; left: 440px; top: 306px;" data-block-type="image" class="sl-block"><div data-fragment-index="2" data-inline-svg="true" style="z-index: 15;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273698-arrow-right.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-arrow icon-arrow-right" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="m 15.71,52.41 60.48,0 -2.9,-19.39 c -0.48,-4.33 2.9,-4.66 5.44,-2.08 L 128.3,71.98 78.73,113.1 c -2.54,2.6 -5.92,2.3 -5.44,-2.1 l 2.9,-19.44 -60.48,0" class="long" stroke-width="2px" stroke="#666" fill="none"></path> </svg>
+</div></div>
+<div data-block-id="be8d0f8cdc499af58c6b69f460d3d997" style="height: auto; min-width: 30px; min-height: 30px; width: 160px; left: 40px; top: 475px;" data-block-type="text" class="sl-block"><div data-fragment-index="0" style="z-index: 16; text-align: center;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content fragment">
+<p>Collecteur</p>
+</div></div>
+<div data-block-id="75b25d571c68bc43096ccbbbb1e24e64" style="height: auto; min-width: 30px; min-height: 30px; width: 160px; left: 520px; top: 475px;" data-block-type="text" class="sl-block"><div data-fragment-index="2" style="z-index: 17; text-align: center;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content fragment">
+<p>Stockage</p>
+</div></div>
+<div data-block-id="84f1c3dd41bda7534e67365afd71f113" style="height: auto; min-width: 30px; min-height: 30px; width: 160px; left: 760px; top: 475px;" data-block-type="text" class="sl-block"><div data-fragment-index="3" style="z-index: 19; text-align: center;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content fragment">
+<p>GUI</p>
+</div></div>
+<div data-block-id="57faadea7c9c8eab7b5fe28d65ecb4ac" style="min-width: 30px; min-height: 30px; width: 88px; height: 88px; left: 680px; top: 306px;" data-block-type="image" class="sl-block"><div data-fragment-index="3" data-inline-svg="true" style="z-index: 20;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273698-arrow-right.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-arrow icon-arrow-right" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="m 15.71,52.41 60.48,0 -2.9,-19.39 c -0.48,-4.33 2.9,-4.66 5.44,-2.08 L 128.3,71.98 78.73,113.1 c -2.54,2.6 -5.92,2.3 -5.44,-2.1 l 2.9,-19.44 -60.48,0" class="long" stroke-width="2px" stroke="#666" fill="none"></path> </svg>
+</div></div>
+<div data-block-id="98685b7adde319919fc66a84d4869559" style="min-width: 30px; min-height: 30px; width: 236px; height: 236px; left: 724px; top: 232px;" data-block-type="image" class="sl-block"><div data-fragment-index="3" data-inline-svg="true" style="z-index: 21;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273644-productivity.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-productivity " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 42.41,42.88 54.6,0 c 0.6,0 1.09,0.49 1.09,1.09 l 0,54.43 c 0,0.6 -0.49,1.09 -1.09,1.09 l -54.6,0 c -0.6,0 -1.09,-0.49 -1.09,-1.09 l 0,-54.43 c 0,-0.6 0.49,-1.09 1.09,-1.09 z m 13.1,0.21 0,56.28 m 28.39,-56.28 0,56.28 m -14.19,0 0,-56.28 m -28.14,42.34 56.32,0 m -56.33,-28.38 56.34,0 m -0.1,14.18 -56.28,0 M 34.26,92.25 62.57,64.7 76.39,77.84 104.3,49.79 M 33.35,91.41 62.49,63.09 76.31,76.23 103.4,48.95" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 106.7,46.7 -1.6,3.68 -0.4,-1.68 -1.8,-0.47 z m 1.2,-1.15 -3,6.66 -0.7,-3.04 -3.2,-0.85 z" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="6c3a8b6642cc3769589a1b48ed74ace6" style="height: auto; min-width: 30px; min-height: 30px; width: 160px; left: 280px; top: 475px;" data-block-type="text" class="sl-block"><div data-fragment-index="1" style="z-index: 22; text-align: center;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content fragment">
+<p>Traitement</p>
+</div></div></section><section class="has-light-background" data-id="2dd29587df17720605a6cfb3ebb020b2"><div data-block-id="4c460e8210e8978d64031e3dc53161bf" class="sl-block" data-block-type="text" style="width: 799px; left: 80px; top: 50px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Est-ce que ça suffit ?</h2>
+</div></div>
+<div data-block-id="bd450716381937ed9b8752a81ba6f312" class="sl-block" data-block-type="image" style="width: 932.719px; height: 506px; left: 13.1406px; top: 169px;"><div data-fragment-index="0" class="sl-block-content fragment"><img data-src="hawkular-powers-dev-pistolet-ops/1409668-nice_dashboard.png" data-natural-height="434" data-natural-width="800" style=""></div></div></section><section class="has-light-background" data-id="ab8e6f1d69a54735769a30f6e82b0ae3"><div data-block-id="259beef47e58ac5991209879e7d906e4" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Pour bien gérer UNE PROD</h2>
+</div></div>
+<div data-block-id="4a7b33c0faa4c27089e29468da127fc0" class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li data-fragment-index="0" class="fragment">
+	<p><span style="font-size:32px">Logs</span> / <span style="font-size:32px">évènements</span></p>
+	</li>
+	<li data-fragment-index="1" class="fragment">
+	<p><span style="font-size:32px">Inventaire</span></p>
+	</li>
+	<li data-fragment-index="2" class="fragment">
+	<p><span style="font-size:32px">Alertes</span></p>
+	</li>
+	<li data-fragment-index="3" class="fragment">
+	<p>...</p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background"><div data-block-id="c5f41ddabdd171864415dfc5db02ce62" class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Hawkular</h2>
+</div></div>
+<div data-block-id="ee4d6fb2af3533ae6e590cf9ab5b39d8" style="min-width: 30px; min-height: 30px; width: 480px; height: 480px; left: 240px; top: 140px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" style="z-index: 12;" class="sl-block-content fragment"><img data-src="hawkular-powers-dev-pistolet-ops/1476850-hawkular_logo_600x600.svg" data-natural-height="600" data-natural-width="600" style=""></div></div>
+<div data-block-id="9343ff081aa4901c9fea39f51029fa8b" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 630px;" data-block-type="text" class="sl-block"><div data-fragment-index="0" style="z-index: 13;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content fragment">
+<p><a href="http://www.hawkular.org/" target="_blank">http://www.hawkular.org/</a></p>
+</div></div></section><section class="has-light-background"><div data-block-id="d0ee106c73890480e6b3d60fd8bc0db9" class="sl-block" data-block-type="text" style="width: 251px; left: 79px; top: 50px; height: auto;"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Hawkular</h2>
+</div></div>
+<div data-block-id="865e1b9ace83947ed8439c58eb94588b" style="width: 252px; height: 252px; left: 205px; top: 125px;" data-block-type="image" class="sl-block"><div data-inline-svg="true" style="z-index: 11;" class="sl-block-content">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273647-puzzle.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-puzzle icon-puzzle-piece" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 34.15,84.24 c 0,0.49 0.42,1.01 0.9,1.15 0,0 19.55,5.61 16.66,12.62 -1.36,3.29 -6.1,1.98 -8.31,7.29 -1.28,3.2 -0.98,8.9 7.82,12.5 9.08,3.7 12.45,2.4 14.38,-2.3 1.54,-3.7 -1.89,-7.4 -0.71,-10.3 3.46,-8.34 21.81,2.5 21.81,2.5 0.42,0.2 1.01,0.1 1.31,-0.3 0,0 12.59,-17.14 5.6,-20.04 -3.8,-1.57 -6,2.52 -10.24,0.78 -3.93,-1.63 -6.21,-6.03 -3.63,-12.27 2.44,-5.92 5.87,-8.14 9.73,-6.56 3.94,1.63 4.17,5.76 8.18,7.42 7.75,3.2 12.15,-17.34 12.15,-17.34 0.2,-0.47 -0.2,-0.99 -0.6,-1.12 0,0 -19.8,-5.57 -16.78,-12.92 1.37,-3.27 5.43,-3.02 7.68,-8.37 1.2,-3.12 1.5,-7.4 -7.34,-11.04 -8.05,-3.33 -12.64,-2.14 -14.56,2.52 -1.45,3.5 1.77,7.9 0.33,11.42 -3.31,7.99 -23.07,-3.99 -23.07,-3.99 -0.42,-0.25 -1.02,-0.15 -1.33,0.24 0,0 -12.84,15.81 -3.33,19.72 3.79,1.58 6.58,-3.43 11.24,-1.51 4.16,1.73 6.08,4.63 3.46,11 -3.08,7.44 -8.76,8.6 -11.39,7.52 C 49.59,70.99 50.1,66.39 45.38,64.15 33.09,58.33 34.15,84.24 34.15,84.24 Z" class="long" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="5fec5246c52e3d264f2fb25548399ec4" style="width: 252px; height: 252px; left: 342px; top: 341px;" data-block-type="image" class="sl-block"><div data-inline-svg="true" style="z-index: 12;" class="sl-block-content">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273647-puzzle.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-puzzle icon-puzzle-piece" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 34.15,84.24 c 0,0.49 0.42,1.01 0.9,1.15 0,0 19.55,5.61 16.66,12.62 -1.36,3.29 -6.1,1.98 -8.31,7.29 -1.28,3.2 -0.98,8.9 7.82,12.5 9.08,3.7 12.45,2.4 14.38,-2.3 1.54,-3.7 -1.89,-7.4 -0.71,-10.3 3.46,-8.34 21.81,2.5 21.81,2.5 0.42,0.2 1.01,0.1 1.31,-0.3 0,0 12.59,-17.14 5.6,-20.04 -3.8,-1.57 -6,2.52 -10.24,0.78 -3.93,-1.63 -6.21,-6.03 -3.63,-12.27 2.44,-5.92 5.87,-8.14 9.73,-6.56 3.94,1.63 4.17,5.76 8.18,7.42 7.75,3.2 12.15,-17.34 12.15,-17.34 0.2,-0.47 -0.2,-0.99 -0.6,-1.12 0,0 -19.8,-5.57 -16.78,-12.92 1.37,-3.27 5.43,-3.02 7.68,-8.37 1.2,-3.12 1.5,-7.4 -7.34,-11.04 -8.05,-3.33 -12.64,-2.14 -14.56,2.52 -1.45,3.5 1.77,7.9 0.33,11.42 -3.31,7.99 -23.07,-3.99 -23.07,-3.99 -0.42,-0.25 -1.02,-0.15 -1.33,0.24 0,0 -12.84,15.81 -3.33,19.72 3.79,1.58 6.58,-3.43 11.24,-1.51 4.16,1.73 6.08,4.63 3.46,11 -3.08,7.44 -8.76,8.6 -11.39,7.52 C 49.59,70.99 50.1,66.39 45.38,64.15 33.09,58.33 34.15,84.24 34.15,84.24 Z" class="long" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="394fea3e5bfe8ffe99d70e9612d224a7" style="width: 252px; height: 252px; left: 468px; top: 70px;" data-block-type="image" class="sl-block"><div data-inline-svg="true" style="z-index: 13; border-width: 1px;" class="sl-block-content">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273647-puzzle.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-puzzle icon-puzzle-piece" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 34.15,84.24 c 0,0.49 0.42,1.01 0.9,1.15 0,0 19.55,5.61 16.66,12.62 -1.36,3.29 -6.1,1.98 -8.31,7.29 -1.28,3.2 -0.98,8.9 7.82,12.5 9.08,3.7 12.45,2.4 14.38,-2.3 1.54,-3.7 -1.89,-7.4 -0.71,-10.3 3.46,-8.34 21.81,2.5 21.81,2.5 0.42,0.2 1.01,0.1 1.31,-0.3 0,0 12.59,-17.14 5.6,-20.04 -3.8,-1.57 -6,2.52 -10.24,0.78 -3.93,-1.63 -6.21,-6.03 -3.63,-12.27 2.44,-5.92 5.87,-8.14 9.73,-6.56 3.94,1.63 4.17,5.76 8.18,7.42 7.75,3.2 12.15,-17.34 12.15,-17.34 0.2,-0.47 -0.2,-0.99 -0.6,-1.12 0,0 -19.8,-5.57 -16.78,-12.92 1.37,-3.27 5.43,-3.02 7.68,-8.37 1.2,-3.12 1.5,-7.4 -7.34,-11.04 -8.05,-3.33 -12.64,-2.14 -14.56,2.52 -1.45,3.5 1.77,7.9 0.33,11.42 -3.31,7.99 -23.07,-3.99 -23.07,-3.99 -0.42,-0.25 -1.02,-0.15 -1.33,0.24 0,0 -12.84,15.81 -3.33,19.72 3.79,1.58 6.58,-3.43 11.24,-1.51 4.16,1.73 6.08,4.63 3.46,11 -3.08,7.44 -8.76,8.6 -11.39,7.52 C 49.59,70.99 50.1,66.39 45.38,64.15 33.09,58.33 34.15,84.24 34.15,84.24 Z" class="long" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="df9e61b472193b2efb52dcccf0dfc6b0" style="width: 252px; height: 252px; left: 606px; top: 224px;" data-block-type="image" class="sl-block"><div data-inline-svg="true" style="z-index: 14;" class="sl-block-content">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273647-puzzle.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-puzzle icon-puzzle-piece" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 34.15,84.24 c 0,0.49 0.42,1.01 0.9,1.15 0,0 19.55,5.61 16.66,12.62 -1.36,3.29 -6.1,1.98 -8.31,7.29 -1.28,3.2 -0.98,8.9 7.82,12.5 9.08,3.7 12.45,2.4 14.38,-2.3 1.54,-3.7 -1.89,-7.4 -0.71,-10.3 3.46,-8.34 21.81,2.5 21.81,2.5 0.42,0.2 1.01,0.1 1.31,-0.3 0,0 12.59,-17.14 5.6,-20.04 -3.8,-1.57 -6,2.52 -10.24,0.78 -3.93,-1.63 -6.21,-6.03 -3.63,-12.27 2.44,-5.92 5.87,-8.14 9.73,-6.56 3.94,1.63 4.17,5.76 8.18,7.42 7.75,3.2 12.15,-17.34 12.15,-17.34 0.2,-0.47 -0.2,-0.99 -0.6,-1.12 0,0 -19.8,-5.57 -16.78,-12.92 1.37,-3.27 5.43,-3.02 7.68,-8.37 1.2,-3.12 1.5,-7.4 -7.34,-11.04 -8.05,-3.33 -12.64,-2.14 -14.56,2.52 -1.45,3.5 1.77,7.9 0.33,11.42 -3.31,7.99 -23.07,-3.99 -23.07,-3.99 -0.42,-0.25 -1.02,-0.15 -1.33,0.24 0,0 -12.84,15.81 -3.33,19.72 3.79,1.58 6.58,-3.43 11.24,-1.51 4.16,1.73 6.08,4.63 3.46,11 -3.08,7.44 -8.76,8.6 -11.39,7.52 C 49.59,70.99 50.1,66.39 45.38,64.15 33.09,58.33 34.15,84.24 34.15,84.24 Z" class="long" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="5d7a8bd755d485fb39748c77f8c9156b" style="width: 252px; height: 252px; left: 114px; top: 333px;" data-block-type="image" class="sl-block"><div data-inline-svg="true" style="z-index: 15; border-width: 5px; border-color: rgb(204, 33, 20);" class="sl-block-content">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273647-puzzle.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-puzzle icon-puzzle-piece" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 34.15,84.24 c 0,0.49 0.42,1.01 0.9,1.15 0,0 19.55,5.61 16.66,12.62 -1.36,3.29 -6.1,1.98 -8.31,7.29 -1.28,3.2 -0.98,8.9 7.82,12.5 9.08,3.7 12.45,2.4 14.38,-2.3 1.54,-3.7 -1.89,-7.4 -0.71,-10.3 3.46,-8.34 21.81,2.5 21.81,2.5 0.42,0.2 1.01,0.1 1.31,-0.3 0,0 12.59,-17.14 5.6,-20.04 -3.8,-1.57 -6,2.52 -10.24,0.78 -3.93,-1.63 -6.21,-6.03 -3.63,-12.27 2.44,-5.92 5.87,-8.14 9.73,-6.56 3.94,1.63 4.17,5.76 8.18,7.42 7.75,3.2 12.15,-17.34 12.15,-17.34 0.2,-0.47 -0.2,-0.99 -0.6,-1.12 0,0 -19.8,-5.57 -16.78,-12.92 1.37,-3.27 5.43,-3.02 7.68,-8.37 1.2,-3.12 1.5,-7.4 -7.34,-11.04 -8.05,-3.33 -12.64,-2.14 -14.56,2.52 -1.45,3.5 1.77,7.9 0.33,11.42 -3.31,7.99 -23.07,-3.99 -23.07,-3.99 -0.42,-0.25 -1.02,-0.15 -1.33,0.24 0,0 -12.84,15.81 -3.33,19.72 3.79,1.58 6.58,-3.43 11.24,-1.51 4.16,1.73 6.08,4.63 3.46,11 -3.08,7.44 -8.76,8.6 -11.39,7.52 C 49.59,70.99 50.1,66.39 45.38,64.15 33.09,58.33 34.15,84.24 34.15,84.24 Z" class="long" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+
+
+
+<div data-block-id="f8556bfd7b3331da7546642ecbc2f736" class="sl-block" data-block-type="text" style="width: 241px; left: 666px; top: 102px; height: auto;"><div data-fragment-index="0" style="z-index: 16; color: rgb(74, 134, 232);" class="sl-block-content fragment" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Metrics</h2>
+</div></div>
+<div data-block-id="e175de9be5ddd9d0ce6a496d35b9d0c8" class="sl-block" data-block-type="text" style="width: 330px; left: 70px; top: 164px; height: auto;"><div data-fragment-index="1" style="z-index: 18; color: rgb(74, 134, 232);" class="sl-block-content fragment" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>ALERTS</h2>
+</div></div>
+<div data-block-id="06c4517cc06f1f2005b84a97066ea029" class="sl-block" data-block-type="text" style="width: 330px; left: 501px; top: 599px; height: auto;"><div data-fragment-index="4" style="z-index: 19; color: rgb(74, 134, 232);" class="sl-block-content fragment" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Inventory</h2>
+</div></div>
+<div data-block-id="7933542d952229a258561e83207d0a4b" class="sl-block" data-block-type="text" style="width: 330px; left: 36px; top: 560px; height: auto;"><div data-fragment-index="3" style="z-index: 20; color: rgb(74, 134, 232);" class="sl-block-content fragment" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Charts</h2>
+</div></div>
+<div data-block-id="c19d63340527cb634ef20168b56c1ae8" class="sl-block" data-block-type="text" style="width: 330px; left: 742px; top: 430px; height: auto;"><div data-fragment-index="2" style="z-index: 21; color: rgb(74, 134, 232);" class="sl-block-content fragment" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Console</h2>
+</div></div></section><section class="has-light-background"><div data-block-id="43dc62f65ef7a894b6ab33d2e94044b7" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Hawkular Metrics</h2>
+</div></div>
+<div data-block-id="5720f8cdf371ff282a5765af1128e77d" class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li data-fragment-index="0" class="fragment">
+	<p><span style="font-size:32px">Séries numériques temporelles</span></p>
+	</li>
+	<li data-fragment-index="1" class="fragment">
+	<p><span style="font-size:32px">Open source </span><a href="https://github.com/hawkular/hawkular-metrics/" target="_blank">https://github.com/hawkular/hawkular-metrics/</a></p>
+	</li>
+	<li data-fragment-index="2" class="fragment">
+	<p><span style="font-size:32px">Licence Apache version 2</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background"><div data-block-id="4e147dc259215a04c0ae5d7a78c8090d" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Objectifs</h2>
+</div></div>
+<div data-block-id="9a360db50def9eea79689ad0b77ff0f0" class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 11; text-align: left;">
+<ul>
+	<li data-fragment-index="0" class="fragment">
+	<p><span style="font-size:32px">API facile à utiliser (HTTP/JSON)</span></p>
+	</li>
+	<li data-fragment-index="1" class="fragment">
+	<p><span style="font-size:32px">Capacité d'absorption</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+<div data-block-id="1c4cfdb1d362f887027b5dba92b6fb2f" style="min-width: 30px; min-height: 30px; width: 778px; height: 396.78px; left: 81px; top: 210px;" data-block-type="image" class="sl-block"><div data-fragment-index="2" style="z-index: 13;" class="sl-block-content fragment"><img data-src="hawkular-powers-dev-pistolet-ops/1477422-patrick-inhale-burgers.gif" data-natural-height="255" data-natural-width="500" style=""></div></div></section><section class="has-light-background"><div data-block-id="a3edcbe24dab72707ecc4ec882bb9ad4" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Briques</h2>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-block-id="8bd46e90dec42ebb30c279a6bc50612d" style="min-width: 30px; min-height: 30px; width: 218px; height: 154.78px; left: 118px; top: 309px;" data-block-type="image" class="sl-block"><div data-fragment-index="1" data-inline-svg="false" style="z-index: 12;" class="sl-block-content fragment"><img data-src="hawkular-powers-dev-pistolet-ops/1412471-resteasy_logo_600x.svg" data-natural-height="426" data-natural-width="600" style=""></div></div>
+<div data-block-id="1226f4f8138ebbb08196c0269df1a02f" style="min-width: 30px; min-height: 30px; width: 400px; height: 120px; left: 480px; top: 500px;" data-block-type="image" class="sl-block"><div data-fragment-index="2" style="z-index: 13;" class="sl-block-content fragment"><img data-src="hawkular-powers-dev-pistolet-ops/1412478-wildfly_logo.svg" data-natural-height="180" data-natural-width="600" style=""></div></div>
+<div data-block-id="24fcbfd9fd056d99528608f6602d287d" style="min-width: 30px; min-height: 30px; width: 212.43px; height: 140px; left: 534px; top: 186px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="false" style="z-index: 14;" class="sl-block-content fragment"><img data-src="hawkular-powers-dev-pistolet-ops/1414034-Apache_Cassandra.svg" data-natural-height="605" data-natural-width="918" style=""></div></div></section><section class="has-light-background"><div data-block-id="c959d04dcf6fba574e44606faf88fef7" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Pourquoi Cassandra ?</h2>
+</div></div>
+<div data-block-id="e053d2708524d5e2151665b80ce34d68" class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li data-fragment-index="0" class="fragment">
+	<p><strong><span style="font-size:32px">Beaucoup</span></strong><span style="font-size:32px"> plus d'écritures que de lectures</span></p>
+	</li>
+	<li data-fragment-index="1" class="fragment">
+	<p><span style="font-size:32px">Pas une base "exotique"</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background"><div data-block-id="61c2b7c8c09e633a3560a3145212a225" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Adaptable à la charge</h2>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-block-id="ca5cfe0b9b5f6ec0b45ab257e376c1f1" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 0px; top: 301px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 11;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273602-cloud.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-cloud " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 59.55,70.33 c 0,-4.4 6.7,-16.96 21.4,-16.96 14.7,0 21.25,12.66 21.25,16.76 m -38.07,4.1 c -6.41,-9.1 -22.1,-5.7 -23.93,6.6 -8.3,0 -12.01,5.5 -13.17,9.8 l 89.87,0 c 1.8,-7.8 -5.7,-24 -20.15,-19.9" class="long" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="0c198b14fdd0164983f01264080cabf6" style="min-width: 30px; min-height: 30px; width: 160px; height: 160px; left: 400px; top: 341.5px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 12;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273656-serverstack.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-serverstack " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 101.7,41.83 -58.76,0 m 58.76,16.25 -58.76,0 m 58.76,16.35 -58.76,0 m 58.76,16.2 -58.76,0 m 0,-49.01 11.02,-5 36.75,0 10.99,5 0,65.18 -58.76,0 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 53.42,98.63 c 0,0.4 0.34,0.8 0.75,0.8 0.42,0 0.75,-0.4 0.75,-0.8 0,-0.4 -0.33,-0.7 -0.75,-0.7 -0.41,0 -0.75,0.3 -0.75,0.7 z m -3.32,0 c 0,0.4 -0.34,0.8 -0.75,0.8 -0.42,0 -0.75,-0.4 -0.75,-0.8 0,-0.4 0.33,-0.7 0.75,-0.7 0.41,0 0.75,0.3 0.75,0.7 z m 37.21,-4.2 3.3,0 0,8.47 -3.3,0 z m 9.5,0 -3.3,0 0,8.47 3.3,0 z M 53.42,82.53 c 0,0.4 0.34,0.7 0.75,0.7 0.42,0 0.75,-0.3 0.75,-0.7 0,-0.5 -0.33,-0.8 -0.75,-0.8 -0.41,0 -0.75,0.3 -0.75,0.8 z m -3.32,0 c 0,0.4 -0.34,0.7 -0.75,0.7 -0.42,0 -0.75,-0.3 -0.75,-0.7 0,-0.5 0.33,-0.8 0.75,-0.8 0.41,0 0.75,0.3 0.75,0.8 z m 37.21,-4.3 3.3,0 0,8.5 -3.3,0 z m 9.5,0 -3.3,0 0,8.5 3.3,0 z m -43.39,-12 c 0,0.4 0.34,0.7 0.75,0.7 0.42,0 0.75,-0.3 0.75,-0.7 0,-0.4 -0.33,-0.8 -0.75,-0.8 -0.41,0 -0.75,0.4 -0.75,0.8 z m -3.32,0 c 0,0.4 -0.34,0.7 -0.75,0.7 -0.42,0 -0.75,-0.3 -0.75,-0.7 0,-0.4 0.33,-0.8 0.75,-0.8 0.41,0 0.75,0.4 0.75,0.8 z m 37.21,-4.29 3.3,0 0,8.59 -3.3,0 z m 9.5,0 -3.3,0 0,8.59 3.3,0 z M 53.42,49.95 c 0,0.41 0.34,0.75 0.75,0.75 0.42,0 0.75,-0.34 0.75,-0.75 0,-0.41 -0.33,-0.75 -0.75,-0.75 -0.41,0 -0.75,0.34 -0.75,0.75 z m -3.32,0 c 0,0.41 -0.34,0.75 -0.75,0.75 -0.42,0 -0.75,-0.34 -0.75,-0.75 0,-0.41 0.33,-0.75 0.75,-0.75 0.41,0 0.75,0.34 0.75,0.75 z m 37.21,-4.26 3.3,0 0,8.52 -3.3,0 z m 9.5,0 -3.3,0 0,8.52 3.3,0 z" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="e57a884090f191c7c0696b979a6d6b2b" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 720px; top: 301px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 14;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273663-storage.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-storage " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 98.07,79.59 c 0,3.8 -11.6,6.8 -26.06,6.8 -14.45,0 -26.08,-3 -26.08,-6.8 l 0,-15.12 c 0,-3.83 11.67,-6.87 26.04,-6.87 14.36,0 26.04,3.04 26.09,6.87 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 57.3,69.98 c -3.17,-0.56 -5.84,-1.3 -7.8,-2.16 m 44.13,0.54 c -10.32,2.86 -19.89,3.02 -29.79,2.4" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="e4c4cce6949e783f3691384ae667de02" style="min-width: 30px; min-height: 30px; width: 80px; height: 80px; left: 280px; top: 381px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 15;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273698-arrow-right.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-arrow icon-arrow-right" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="m 15.71,52.41 60.48,0 -2.9,-19.39 c -0.48,-4.33 2.9,-4.66 5.44,-2.08 L 128.3,71.98 78.73,113.1 c -2.54,2.6 -5.92,2.3 -5.44,-2.1 l 2.9,-19.44 -60.48,0" class="long" stroke-width="2px" stroke="#666" fill="none"></path> </svg>
+</div></div>
+<div data-block-id="46d3c295154dec8e805582d3cef19cf9" style="min-width: 30px; min-height: 30px; width: 80px; height: 80px; left: 600px; top: 381px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 16;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273698-arrow-right.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-arrow icon-arrow-right" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="m 15.71,52.41 60.48,0 -2.9,-19.39 c -0.48,-4.33 2.9,-4.66 5.44,-2.08 L 128.3,71.98 78.73,113.1 c -2.54,2.6 -5.92,2.3 -5.44,-2.1 l 2.9,-19.44 -60.48,0" class="long" stroke-width="2px" stroke="#666" fill="none"></path> </svg>
+</div></div>
+<div data-block-id="fe3d95b1806f6d0166427a6baf6b57bc" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 720px; top: 160px;" data-block-type="image" class="sl-block"><div data-fragment-index="1" data-inline-svg="true" style="z-index: 17;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273663-storage.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-storage " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 98.07,79.59 c 0,3.8 -11.6,6.8 -26.06,6.8 -14.45,0 -26.08,-3 -26.08,-6.8 l 0,-15.12 c 0,-3.83 11.67,-6.87 26.04,-6.87 14.36,0 26.04,3.04 26.09,6.87 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 57.3,69.98 c -3.17,-0.56 -5.84,-1.3 -7.8,-2.16 m 44.13,0.54 c -10.32,2.86 -19.89,3.02 -29.79,2.4" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="272367b2fd964badf2b461b63060255b" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 720px; top: 440px;" data-block-type="image" class="sl-block"><div data-fragment-index="2" data-inline-svg="true" style="z-index: 18;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273663-storage.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-storage " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 98.07,79.59 c 0,3.8 -11.6,6.8 -26.06,6.8 -14.45,0 -26.08,-3 -26.08,-6.8 l 0,-15.12 c 0,-3.83 11.67,-6.87 26.04,-6.87 14.36,0 26.04,3.04 26.09,6.87 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 57.3,69.98 c -3.17,-0.56 -5.84,-1.3 -7.8,-2.16 m 44.13,0.54 c -10.32,2.86 -19.89,3.02 -29.79,2.4" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="a2e8d8fc9b03278bd214348fbc2b2634" style="min-width: 30px; min-height: 30px; width: 160px; height: 160px; left: 400px; top: 490px;" data-block-type="image" class="sl-block"><div data-fragment-index="3" data-inline-svg="true" style="z-index: 19;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273656-serverstack.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-serverstack " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 101.7,41.83 -58.76,0 m 58.76,16.25 -58.76,0 m 58.76,16.35 -58.76,0 m 58.76,16.2 -58.76,0 m 0,-49.01 11.02,-5 36.75,0 10.99,5 0,65.18 -58.76,0 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 53.42,98.63 c 0,0.4 0.34,0.8 0.75,0.8 0.42,0 0.75,-0.4 0.75,-0.8 0,-0.4 -0.33,-0.7 -0.75,-0.7 -0.41,0 -0.75,0.3 -0.75,0.7 z m -3.32,0 c 0,0.4 -0.34,0.8 -0.75,0.8 -0.42,0 -0.75,-0.4 -0.75,-0.8 0,-0.4 0.33,-0.7 0.75,-0.7 0.41,0 0.75,0.3 0.75,0.7 z m 37.21,-4.2 3.3,0 0,8.47 -3.3,0 z m 9.5,0 -3.3,0 0,8.47 3.3,0 z M 53.42,82.53 c 0,0.4 0.34,0.7 0.75,0.7 0.42,0 0.75,-0.3 0.75,-0.7 0,-0.5 -0.33,-0.8 -0.75,-0.8 -0.41,0 -0.75,0.3 -0.75,0.8 z m -3.32,0 c 0,0.4 -0.34,0.7 -0.75,0.7 -0.42,0 -0.75,-0.3 -0.75,-0.7 0,-0.5 0.33,-0.8 0.75,-0.8 0.41,0 0.75,0.3 0.75,0.8 z m 37.21,-4.3 3.3,0 0,8.5 -3.3,0 z m 9.5,0 -3.3,0 0,8.5 3.3,0 z m -43.39,-12 c 0,0.4 0.34,0.7 0.75,0.7 0.42,0 0.75,-0.3 0.75,-0.7 0,-0.4 -0.33,-0.8 -0.75,-0.8 -0.41,0 -0.75,0.4 -0.75,0.8 z m -3.32,0 c 0,0.4 -0.34,0.7 -0.75,0.7 -0.42,0 -0.75,-0.3 -0.75,-0.7 0,-0.4 0.33,-0.8 0.75,-0.8 0.41,0 0.75,0.4 0.75,0.8 z m 37.21,-4.29 3.3,0 0,8.59 -3.3,0 z m 9.5,0 -3.3,0 0,8.59 3.3,0 z M 53.42,49.95 c 0,0.41 0.34,0.75 0.75,0.75 0.42,0 0.75,-0.34 0.75,-0.75 0,-0.41 -0.33,-0.75 -0.75,-0.75 -0.41,0 -0.75,0.34 -0.75,0.75 z m -3.32,0 c 0,0.41 -0.34,0.75 -0.75,0.75 -0.42,0 -0.75,-0.34 -0.75,-0.75 0,-0.41 0.33,-0.75 0.75,-0.75 0.41,0 0.75,0.34 0.75,0.75 z m 37.21,-4.26 3.3,0 0,8.52 -3.3,0 z m 9.5,0 -3.3,0 0,8.52 3.3,0 z" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div></section><section class="has-light-background"><div data-block-id="bbe676b600117a4f4a2cd6271d266ad8" class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Multi-tenant</h2>
+</div></div>
+<div data-block-id="4103e02aaf129fcad6bcbb2d1fc51ac2" style="min-width: 30px; min-height: 30px; width: 160px; height: 160px; left: 80px; top: 140px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 11;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273672-user-vneck.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-user icon-user-3 icon-user-vneck " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 53.68,104.4 c -4.45,-3.3 -9.23,-6.33 -9.23,-12.2 l 0,-12.23 c 0,-9.1 3.5,-19.94 20,-19.94 l 15.2,0 c 16.5,0 19.9,10.84 19.9,19.94 l 0,12.24 c 0,5.91 -4.78,8.99 -9.23,12.29 m -0.17,-26.49 0,33.39 c -8.41,5.6 -27.61,5.3 -36.4,0 l 0,-33.39 M 72.07,28.4 c 7.15,0 13.09,5.86 13.09,13.08 0,7.19 -5.94,13.06 -13.09,13.06 -7.26,0 -13.09,-5.87 -13.09,-13.06 0,-7.22 5.83,-13.08 13.09,-13.08 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 99.44,80.83 -9.31,2.34 m 9.31,-0.13 -9.31,2.34 m -45.7,-4.55 9.31,2.34 m -9.31,-0.13 9.31,2.34 M 64.92,59.96 c 1.76,3.02 2.29,6.22 6.63,8.88 3.75,-2.81 4.9,-5.87 6.62,-8.88" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="6b516177a8c5faa0759d058032fc1e0c" style="min-width: 30px; min-height: 30px; width: 160px; height: 160px; left: 240px; top: 140px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 12;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273669-user-beard.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-user icon-user-6 icon-user-beard" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 72.18,62.16 -2.36,5.19 -2.36,-8.6 -2.35,3.45 -5.48,-16.27 8.53,5.32 4.02,-3.69 3.71,3.69 8.46,-5.32 -5.11,16.38 -2.35,-4.43 -2.36,9.47 z m -18.5,42.24 c -4.45,-3.3 -9.23,-6.33 -9.23,-12.2 l 0,-12.23 c 0,-9.1 3.5,-19.94 20,-19.94 m 15.2,0 c 16.5,0 19.9,10.84 19.9,19.94 l 0,12.24 c 0,5.91 -4.78,8.99 -9.23,12.29 m -0.17,-26.49 0,33.39 c -8.41,5.6 -27.61,5.3 -36.4,0 l 0,-33.39 m 5.97,-32.2 c -0.48,-1.36 -0.74,-2.82 -0.74,-4.33 0,-7.22 5.83,-13.08 13.09,-13.08 7.15,0 13.09,5.86 13.09,13.08 0,1.63 -0.31,3.2 -0.86,4.64" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 78.04,96.36 -1.62,0 m 1.44,-6.1 -1.62,0 m 1.27,-6.1 -1.62,0 m -3.01,30.84 0,-36.25 m 17.07,9.85 10.25,0 m -56.31,0 10.25,0" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="7820cbd10d56a194bacae41f79bed589" style="min-width: 30px; min-height: 30px; width: 160px; height: 160px; left: 80px; top: 280px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 13;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273671-user-pearls.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-user icon-user-5 icon-user-pearls" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 53.68,104.4 c -4.45,-3.3 -9.23,-6.33 -9.23,-12.2 l 0,-12.23 c 0,-9.1 3.5,-19.94 20,-19.94 l 15.2,0 c 16.5,0 19.9,10.84 19.9,19.94 l 0,12.24 c 0,5.91 -4.78,8.99 -9.23,12.29 m -0.17,-26.49 0,33.39 c -8.41,5.6 -27.61,5.3 -36.4,0 l 0,-33.39 M 72.07,28.4 c 7.15,0 13.09,5.86 13.09,13.08 0,7.19 -5.94,13.06 -13.09,13.06 -7.26,0 -13.09,-5.87 -13.09,-13.06 0,-7.22 5.83,-13.08 13.09,-13.08 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 74.14,71.31 a 1.797,1.797 0 0 1 1.8,-1.8 1.797,1.797 0 0 1 1.8,1.8 1.797,1.797 0 0 1 -1.8,1.8 1.797,1.797 0 0 1 -1.8,-1.8 z m 2.53,-2.53 a 1.797,1.797 0 0 0 1.8,1.8 1.797,1.797 0 0 0 1.8,-1.8 1.797,1.797 0 0 0 -1.8,-1.8 1.797,1.797 0 0 0 -1.8,1.8 z m 2.29,-2.77 a 1.797,1.797 0 0 1 1.8,-1.8 1.797,1.797 0 0 1 1.8,1.8 1.797,1.797 0 0 1 -1.8,1.8 1.797,1.797 0 0 1 -1.8,-1.8 z m 0.97,-3.51 a 1.797,1.797 0 0 0 1.8,1.8 1.797,1.797 0 0 0 1.8,-1.8 1.797,1.797 0 0 0 -1.8,-1.8 1.797,1.797 0 0 0 -1.8,1.8 z m -5.54,10.12 a 1.797,1.797 0 0 1 -1.8,1.8 1.797,1.797 0 0 1 -1.8,-1.8 1.797,1.797 0 0 1 1.8,-1.8 1.797,1.797 0 0 1 1.8,1.8 z m -3.35,-1.31 a 1.797,1.797 0 0 0 -1.8,-1.8 1.797,1.797 0 0 0 -1.8,1.8 1.797,1.797 0 0 0 1.8,1.8 1.797,1.797 0 0 0 1.8,-1.8 z m -2.53,-2.53 a 1.797,1.797 0 0 1 -1.8,1.8 1.797,1.797 0 0 1 -1.8,-1.8 1.797,1.797 0 0 1 1.8,-1.8 1.797,1.797 0 0 1 1.8,1.8 z m -2.29,-2.77 a 1.797,1.797 0 0 0 -1.8,-1.8 1.797,1.797 0 0 0 -1.8,1.8 1.797,1.797 0 0 0 1.8,1.8 1.797,1.797 0 0 0 1.8,-1.8 z M 65.25,62.5 a 1.797,1.797 0 0 1 -1.8,1.8 1.797,1.797 0 0 1 -1.8,-1.8 1.797,1.797 0 0 1 1.8,-1.8 1.797,1.797 0 0 1 1.8,1.8 z" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="d7291ae7b99920d5ce45ee325e1c7ca5" style="min-width: 30px; min-height: 30px; width: 160px; height: 160px; left: 240px; top: 280px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 14;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273670-user-business.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-user icon-user-4 icon-user-business" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 53.68,104.4 c -4.45,-3.3 -9.23,-6.33 -9.23,-12.2 l 0,-12.23 c 0,-9.1 3.5,-19.94 20,-19.94 l 15.2,0 c 16.5,0 19.9,10.84 19.9,19.94 l 0,12.24 c 0,5.91 -4.78,8.99 -9.23,12.29 m -0.17,-26.49 0,33.39 c -8.41,5.6 -27.61,5.3 -36.4,0 l 0,-33.39 M 72.07,28.4 c 7.15,0 13.09,5.86 13.09,13.08 0,7.19 -5.94,13.06 -13.09,13.06 -7.26,0 -13.09,-5.87 -13.09,-13.06 0,-7.22 5.83,-13.08 13.09,-13.08 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 68.19,60.11 2.3,4.22 3.01,0 2.3,-4.22 m 0,0 -7.61,0 m 5.31,4.22 3.3,42.77 -4.8,4.7 -4.81,-4.7 3.3,-42.77" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="d4164c74785efed5abbb9f3a98999d36" style="min-width: 30px; min-height: 30px; width: 161px; height: 161px; left: 560px; top: 279px;" data-block-type="image" class="sl-block"><div data-fragment-index="1" data-inline-svg="true" style="z-index: 15;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273641-office-building.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-office-building icon-office" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="m 38.5,84.26 24.61,0 m 17.58,0 24.91,0 m 0,11.1 -24.91,0 m -17.58,0 -24.61,0 m 0,-45.4 67.1,0 m 0,11.14 -67.1,0 m 67.1,5.75 -67.1,0 m 0,34.15 67,0 0,-57.84 -67,0 z m -0.96,-58.87 68.96,0 0,59.77 -68.96,0 z m 0.97,35.86 67.09,0 m -42.29,23.11 0,-17.94 17.37,0 0,17.94" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 72,83.11 0,17.79 m 7.42,-22.83 0,-11.14 m -14.38,0 0,11.14 m -13.36,0 0,-11.14 m 41.26,-5.91 0,-11.14 m -13.52,0 0,11.14 m -14.38,0 0,-11.14 m -13.36,0 0,11.14 m 0,23.14 0,11.2 m 41.26,-28.43 0,11.14 m 0,17.29 0,-11.2 m -24.02,8.3 0,0.8 m 5.94,-0.8 0,0.8" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="16e9da9e06611c429e9bac53b789a515" style="min-width: 30px; min-height: 30px; width: 161px; height: 161px; left: 721px; top: 280px;" data-block-type="image" class="sl-block"><div data-fragment-index="1" data-inline-svg="true" style="z-index: 16;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273631-industry.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-industry" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="m 76.07,55.45 -0.1,-30.2 5.25,0 0.1,30.2 m -16,0 -0.1,-30.2 5.25,0 0.1,30.2 m -31.32,19.3 0,-41.25 7.75,0 0,41.25 m 10.62,-0.1 0,-19.21 46.98,0 0,19.21 m -46.01,0 0,-18.18 45.11,0 0,18.18 m -71.08,0 78.98,0 0,44.35 -78.98,0 z m 0.97,1.03 77.11,0 0,42.42 -77.11,0 z m 0,24.42 77.07,0 m 0,11.1 -77.07,0 m 77.07,-28.8 -77.07,0 m 0,11.14 77.07,0" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 88.74,70.27 0,-9.14 m -14.31,0 0,9.14 m -15.84,-9.14 45.11,0 m 0,9.14 -45.11,0 m 35.98,41.03 0,-11.1 m -14.31,0 0,11.1 m -15.21,0 0,-11.1 m -14.14,0 0,11.1 m 43.66,-28.82 0,11.14 m -14.31,0 0,-11.14 m -15.21,0 0,11.14 m -14.14,0 0,-11.14" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="b381d8e57ff97bbd6c1e75c1e8eb6d91" style="min-width: 30px; min-height: 30px; width: 161px; height: 161px; left: 721px; top: 420px;" data-block-type="image" class="sl-block"><div data-fragment-index="1" data-inline-svg="true" style="z-index: 17;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273629-gov.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-gov icon-government " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 78.39,93.49 5.9,0 m 0,-25.7 -5.9,0 m 5.9,28.9 0,-32.1 -5.9,0 0,32.1 m -12.6,-3.2 -6.04,0 m 0,-25.7 6.04,0 m 0,28.9 0,-32.1 -6.04,0 0,32.1 m 38.54,0 0,-32.1 -5.9,0 0,32.1 m -40.73,0 0,-32.1 -5.94,0 0,32.1 m -4.23,-0.2 61.01,0 0,7.61 -61.01,0 z m 61.01,-39.52 0,7.62 -61.01,0 0,-7.62 m 30,-17.06 37.31,17.14 -73.59,0 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 66.09,45.77 5.5,-2.59 18.7,8.6 m 2.1,41.71 5.9,0 m 0,-25.7 -5.9,0 m -40.73,25.7 -5.94,0 m 0,-25.7 5.94,0 m 50.84,32.51 -61.01,0" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="7749660ad6f1fee30e45d57949b1e7bc" style="min-width: 30px; min-height: 30px; width: 161px; height: 161px; left: 559px; top: 420px;" data-block-type="image" class="sl-block"><div data-fragment-index="1" data-inline-svg="true" style="z-index: 19;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273630-helpdesk.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-helpdesk icon-reception" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 116.1,78.89 0,38.01 -79.53,0 0,-38.01 m -8.73,-6.14 88.26,0 0,6.13 -88.26,0 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 98.35,62.9 -0.57,9.38 m -21.5,-9.38 0.57,9.38 m -7.46,0.24 -0.23,-9.09 c 0,-7.55 6.73,-12.79 12.1,-12.79 l 12.11,0 c 5.05,0 12.23,5.71 12.13,12.79 l -0.2,9.21 M 81.27,42.24 c 3.41,3.41 8.93,3.41 12.34,0 3.41,-3.41 3.41,-8.94 0,-12.35 -3.41,-3.41 -8.93,-3.41 -12.34,0 -3.41,3.41 -3.41,8.94 0,12.35 z" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div></section><section class="has-light-background"><div data-block-id="d5f327f7f04e05de03dd3cf54d3a1658" class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>écriture</h2>
+</div></div>
+<div data-block-id="3a3db434dafb9cef67d28506e9069fe5" style="min-width: 30px; min-height: 30px; width: 853px; height: 534px; left: 80px; top: 140px;" data-block-type="code" class="sl-block"><div data-fragment-index="0" style="z-index: 12;" class="sl-block-content fragment"><pre><code>POST /hawkular/metrics/gauges/data HTTP/1.1
+Content-Type: application/json;charset=utf-8
+Content-Length: 4923
+Hawkular-Tenant: default
+
+[
+  {
+    "id": "collectd.stetson.memory.memory.free",
+    "data": [
+      {
+        "timestamp": 1432459398673,
+        "value": 1.7434624E8
+      }
+    ]
+  }
+]        </code></pre></div></div></section><section class="has-light-background"><div data-block-id="ebd275ce4ddb0f71cd80e6eea4de2457" class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Lecture</h2>
+</div></div>
+<div data-block-id="56eba6c4b8ab7f549252cbc8b9bcce1c" style="width: 853px; height: 534px; left: 80px; top: 140px;" data-block-type="code" class="sl-block"><div data-fragment-index="0" style="z-index: 12;" class="sl-block-content fragment"><pre><code>GET /hawkular/metrics/gauges/collectd.stetson.memory.memory.free/data? HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Hawkular-Tenant: default
+
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: application/json
+
+0bf6
+[
+  {
+    "timestamp": 1432459978673,
+    "value": 4.972417024E9
+  },
+  {
+    "timestamp": 1432459968673,
+    "value": 4.97635328E9
+  },
+  {
+    "timestamp": 1432459368673,
+    "value": 1.44093184E8
+  }
+]
+0
+
+</code></pre></div></div></section><section class="has-light-background"><div data-block-id="d550fa84f58e0a43e666eaa5b5ab5d35" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Clients</h2>
+</div></div>
+<div data-block-id="95b319fd54e1ba989eef7ba0e9d7704a" class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li data-fragment-index="0" class="fragment">
+	<p><span style="font-size:32px">Java</span> <a href="https://github.com/Hawkular-QE/hawkular-java-client" target="_blank">https://github.com/Hawkular-QE/hawkular-java-client</a></p>
+	</li>
+	<li data-fragment-index="1" class="fragment">
+	<p><span style="font-size:32px">Python </span><a href="https://github.com/hawkular/hawkular-client-python" target="_blank">https://github.com/hawkular/hawkular-client-python</a></p>
+	</li>
+	<li data-fragment-index="2" class="fragment">
+	<p><span style="font-size:32px">Go </span><a href="https://github.com/hawkular/hawkular-client-go" target="_blank">https://github.com/hawkular/hawkular-client-go</a></p>
+	</li>
+	<li data-fragment-index="3" class="fragment">
+	<p><span style="font-size:32px">Ruby </span><a href="https://github.com/hawkular/hawkular-client-ruby" target="_blank">https://github.com/hawkular/hawkular-client-ruby</a></p>
+	</li>
+	<li data-fragment-index="4" class="fragment">
+	<p><span style="font-size:32px">Node.js (planifié)</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background"><div data-block-id="8a3577ac223378855f16d8515027e2fb" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Agents</h2>
+</div></div>
+<div data-block-id="5b2b376e0b385326df84ff4689fe4ea7" class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li data-fragment-index="0" class="fragment">
+	<p><span style="font-size:32px">Wildfly Agent (JBoss Middleware)</span></p>
+	</li>
+	<li data-fragment-index="1" class="fragment">
+	<p><span style="font-size:32px">vertx-hawkular-metrics</span></p>
+	</li>
+	<li data-fragment-index="2" class="fragment">
+	<p><span style="font-size:32px">Heapster (Kubernetes / Openshift)</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background"><div data-block-id="be2716657888f3fe18e305db4c674a9c" class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>ptrans (Protocol translator)</h2>
+</div></div>
+<div data-block-id="772f29dc9eb5006a8e33b6644be023e6" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 677px; top: 280px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 12;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273663-storage.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-storage " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 98.07,79.59 c 0,3.8 -11.6,6.8 -26.06,6.8 -14.45,0 -26.08,-3 -26.08,-6.8 l 0,-15.12 c 0,-3.83 11.67,-6.87 26.04,-6.87 14.36,0 26.04,3.04 26.09,6.87 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 57.3,69.98 c -3.17,-0.56 -5.84,-1.3 -7.8,-2.16 m 44.13,0.54 c -10.32,2.86 -19.89,3.02 -29.79,2.4" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="b78e37ffe3bafe793c5f24d68d98445a" style="min-width: 30px; min-height: 30px; width: 79px; height: 79px; left: 278px; top: 210px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 13;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273697-arrow-bottom-right.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-arrow icon-arrow-bottom-right" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="M 25.29,52.94 68.05,95.71 52.28,107.4 c -3.42,2.7 -1.24,5.3 2.38,5.3 l 64.04,6 -6,-64.11 c 0,-3.63 -2.5,-5.79 -5.3,-2.36 L 95.73,68.03 52.96,25.3" class="long" stroke-width="2px" stroke="#666" fill="none"></path> </svg>
+</div></div>
+<div data-block-id="7ef92edccb1d2452f8975bb5f6bbd41f" style="min-width: 30px; min-height: 30px; width: 79px; height: 79px; left: 278px; top: 350px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 14;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273698-arrow-right.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-arrow icon-arrow-right" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="m 15.71,52.41 60.48,0 -2.9,-19.39 c -0.48,-4.33 2.9,-4.66 5.44,-2.08 L 128.3,71.98 78.73,113.1 c -2.54,2.6 -5.92,2.3 -5.44,-2.1 l 2.9,-19.44 -60.48,0" class="long" stroke-width="2px" stroke="#666" fill="none"></path> </svg>
+</div></div>
+<div data-block-id="7ac3235905076c2f7f6e0b9a1a616fb3" style="min-width: 30px; min-height: 30px; width: 79px; height: 79px; left: 278px; top: 490px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 15;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273699-arrow-top-right.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-arrow icon-arrow-top-right" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="M 25.29,91.06 68.05,48.29 52.28,36.63 c -3.42,-2.72 -1.24,-5.35 2.38,-5.32 l 64.04,-6.03 -6,64.13 c 0,3.63 -2.5,5.79 -5.3,2.36 L 95.73,75.97 52.96,118.7" class="long" stroke-width="2px" stroke="#666" fill="none"></path> &gt;</svg>
+</div></div>
+<div data-block-id="898b1ce702d8e21ee3fb33e96a6e67f5" style="min-width: 30px; min-height: 30px; width: 80px; height: 80px; left: 597px; top: 360px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 16;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273698-arrow-right.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-arrow icon-arrow-right" viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"> <path d="m 15.71,52.41 60.48,0 -2.9,-19.39 c -0.48,-4.33 2.9,-4.66 5.44,-2.08 L 128.3,71.98 78.73,113.1 c -2.54,2.6 -5.92,2.3 -5.44,-2.1 l 2.9,-19.44 -60.48,0" class="long" stroke-width="2px" stroke="#666" fill="none"></path> </svg>
+</div></div>
+<div data-block-id="af41c3343216107772024ec2008f410c" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 357px; top: 280px;" data-block-type="image" class="sl-block"><div data-fragment-index="0" data-inline-svg="true" style="z-index: 17;" class="sl-block-content fragment">
+<img data-src="hawkular-powers-dev-pistolet-ops/1273628-gears.svg" data-natural-height="144" data-natural-width="144" style="display: none;"><svg preserveaspectratio="xMidYMid meet" class="icon stroked icon-gears " viewbox="0 0 144 144" height="144" width="144" xmlns="http://www.w3.org/2000/svg"><path d="m 103.4,48.6 c -0.5,-0.8 -1.1,-1.5 -1.7,-2.1 l 2.1,-5.1 c -1.2,-0.8 -2.4,-1.4 -3.7,-2 l -3,4.8 c -1.8,-0.4 -3.7,-0.4 -5.4,0.2 L 88.2,40 c -1.2,0.6 -2.4,1.4 -3.5,2.2 l 2.6,5 c -1.3,1.4 -2.1,3 -2.5,4.8 l -5.5,0.8 c -0.1,1.4 0,2.8 0.1,4.2 l 5.7,0.2 c 0.2,0.8 0.6,1.7 1.1,2.5 0.5,0.8 1.1,1.4 1.8,2 l -2.2,5.2 c 1.2,0.8 2.5,1.4 3.8,2 l 3,-4.8 c 1.7,0.4 3.6,0.3 5.4,-0.2 l 3.4,4.4 c 1.3,-0.6 2.4,-1.4 3.6,-2.2 l -2.7,-5 c 1.3,-1.4 2.2,-3.1 2.5,-4.8 l 5.6,-0.8 c 0.1,-1.4 0,-2.8 -0.2,-4.2 l -5.6,-0.2 c -0.3,-0.8 -0.6,-1.7 -1.2,-2.5 z M 89.8,96.2 c 0.1,-1.4 0.1,-2.9 0,-4.3 l -5.6,-0.4 c -0.4,-2 -1.1,-3.8 -2.2,-5.4 l 3.6,-4.3 c -0.9,-1.1 -1.9,-2.1 -3,-3 l -4.3,3.6 c -1.6,-1.1 -3.4,-1.8 -5.4,-2.2 l -0.5,-5.6 c -1.4,-0.1 -2.8,-0.1 -4.2,0 l -0.5,5.6 c -1.9,0.4 -3.8,1.1 -5.3,2.2 l -4.3,-3.6 c -1.1,0.9 -2.1,1.9 -3,3 l 3.6,4.3 c -1.1,1.6 -1.9,3.4 -2.2,5.4 l -5.6,0.4 c -0.2,1.4 -0.2,2.9 0,4.3 l 5.6,0.4 c 0.3,2 1.1,3.8 2.2,5.4 l -3.6,4.3 c 0.9,1.1 1.9,2.1 3,3 l 4.3,-3.6 c 1.5,1.1 3.4,1.8 5.3,2.2 l 0.5,5.6 c 1.4,0.1 2.8,0.1 4.2,0 l 0.5,-5.6 c 2,-0.4 3.8,-1.1 5.4,-2.2 l 4.3,3.6 c 1.1,-0.9 2.1,-1.9 3,-3 L 82,102 c 1.1,-1.6 1.8,-3.4 2.2,-5.4 l 5.6,-0.4 z M 78.3,55.4 c 0,-0.9 -0.1,-1.7 -0.2,-2.6 l 5.3,-1.9 c -0.2,-1.4 -0.6,-2.8 -1,-4.1 l -5.6,1 C 76.1,46.2 75.2,44.7 74.2,43.4 L 77.8,39 c -0.9,-1.1 -1.9,-2.1 -2.9,-3 l -4.4,3.7 C 69.1,38.6 67.7,37.8 66,37.1 l 1,-5.6 C 65.7,31 64.4,30.7 63,30.4 l -2,5.4 c -0.8,-0.1 -1.7,-0.2 -2.5,-0.2 -0.9,0 -1.8,0.1 -2.6,0.2 L 54,30.4 c -1.5,0.3 -2.8,0.6 -4.1,1.1 l 1,5.6 c -1.6,0.7 -3.1,1.5 -4.5,2.6 L 42.1,36 c -1.1,0.9 -2.1,1.9 -3,3 l 3.6,4.4 c -1,1.3 -1.9,2.8 -2.5,4.4 l -5.6,-1 c -0.5,1.3 -0.9,2.7 -1.1,4.1 l 5.3,1.9 c -0.1,0.9 -0.2,1.7 -0.2,2.6 0,0.9 0.1,1.7 0.2,2.6 l -5.3,1.9 c 0.2,1.4 0.6,2.8 1.1,4.1 l 5.6,-1 c 0.6,1.6 1.5,3.1 2.5,4.4 l -3.6,4.4 c 0.9,1.1 1.9,2.1 3,3 l 4.3,-3.7 c 1.4,1.1 2.9,1.9 4.5,2.6 l -1,5.6 c 1.3,0.5 2.6,0.8 4,1.1 l 2,-5.4 c 0.8,0.1 1.7,0.2 2.6,0.2 0.8,0 1.7,-0.1 2.5,-0.2 l 2,5.4 c 1.4,-0.3 2.7,-0.6 4,-1.1 l -1,-5.6 c 1.7,-0.7 3.1,-1.5 4.5,-2.6 l 4.4,3.7 c 1,-0.9 2,-1.9 2.9,-3 l -3.6,-4.4 c 1,-1.3 1.9,-2.8 2.6,-4.4 l 5.6,1 c 0.4,-1.3 0.8,-2.7 1,-4.1 L 78.1,58 c 0.1,-0.9 0.2,-1.7 0.2,-2.6 z" class="long" stroke-width="2px" stroke="#666" fill="none"></path><path d="m 77.1,100.2 c -1.7,1.8 -4.1,3 -6.8,3 -5,0 -9.1,-4.1 -9.1,-9.1 0,-5.1 4.1,-9.2 9.1,-9.2 5.1,0 9.1,4.1 9.1,9.2 0,0.6 0,1.2 -0.1,1.8 m -24.2,-49 c 1,-0.4 2.2,-0.6 3.4,-0.6 5,0 9.1,4.1 9.1,9.1 0,5 -4.1,9.1 -9.1,9.1 -5.1,0 -9.2,-4.1 -9.2,-9.1 0,-1.8 0.6,-3.6 1.5,-5 m 24.1,43.7 c 0,2.6 -2,4.6 -4.6,4.6 -2.6,0 -4.6,-2 -4.6,-4.6 0,-2.6 2,-4.6 4.6,-4.6 2.6,0 4.6,2 4.6,4.6 z m 24.5,-40 c 0,2.6 -2,4.6 -4.6,4.6 -2.6,0 -4.6,-2 -4.6,-4.6 0,-2.6 2,-4.6 4.6,-4.6 2.6,0 4.6,2 4.6,4.6 z m -36.3,1.3 c 0,2.6 -2,4.6 -4.6,4.6 -2.6,0 -4.6,-2 -4.6,-4.6 0,-2.6 2,-4.6 4.6,-4.6 2.6,0 4.6,2 4.6,4.6 z" class="short" stroke-width="2px" stroke="#666" fill="none"></path></svg>
+</div></div>
+<div data-block-id="0a828614539320a5fab8fab06c53a074" style="height: auto; min-width: 30px; min-height: 30px; width: 220px; left: 23px; top: 168px;" data-block-type="text" class="sl-block"><div data-fragment-index="0" style="z-index: 18;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content fragment">
+<p style="text-align: right;"><span style="font-size:32px">collectd</span></p>
+</div></div>
+<div data-block-id="6f5637cfc18b4f72ff2d235c4e87c8cd" style="height: auto; min-width: 30px; min-height: 30px; width: 220px; left: 23px; top: 369px;" data-block-type="text" class="sl-block"><div data-fragment-index="0" style="z-index: 19;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content fragment">
+<p style="text-align:right"><span style="font-size:32px">graphite</span></p>
+</div></div>
+<div data-block-id="1b08aa7afb22e567b9716f57885ad3f0" style="height: auto; min-width: 30px; min-height: 30px; width: 220px; left: 23px; top: 560px;" data-block-type="text" class="sl-block"><div data-fragment-index="0" style="z-index: 20;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content fragment">
+<p style="text-align:right"><span style="font-size:32px">ganglia</span></p>
+</div></div>
+<div data-block-id="355a74b8b89ac022714bfb628fef26a8" style="height: auto; min-width: 30px; min-height: 30px; width: 837px; left: 80px; top: 636px;" data-block-type="text" class="sl-block"><div data-fragment-index="0" style="z-index: 21;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content fragment">
+<p><a href="https://github.com/hawkular/hawkular-metrics/tree/master/clients/ptranslator" target="_blank">https://github.com/hawkular/hawkular-metrics/tree/master/clients/ptranslator</a></p>
+</div></div></section><section class="has-light-background"><div data-block-id="4bb1c1dee56b62d088ec6bf3fb25be0d" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Visualisation</h2>
+</div></div>
+<div data-block-id="05470800aa8478b3f025d03df7b3917a" class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li data-fragment-index="0" class="fragment">
+	<p><span style="font-size:32px">Grafana (adaptateur de protocole InfluxDB)</span></p>
+	</li>
+	<li data-fragment-index="1" class="fragment">
+	<p><span style="font-size:32px">Hawkular Charts</span></p>
+	</li>
+	<li data-fragment-index="2" class="fragment">
+	<p><span style="font-size:32px">Hawkular Console (JBoss Middleware)</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background"><div data-block-id="4385e5582492fc3b44c746759fd6072b" class="sl-block" data-block-type="text" style="width: 900px; left: 30px; top: 58px; height: auto;"><div dir="ui" data-placeholder-text="Text" class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left;">
+<h1>Démo</h1>
+</div></div></section><section class="has-light-background"><div data-block-id="e8404c0c6db588c81ef1022ee59d3743" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Hawkular Charts</h2>
+</div></div>
+<div data-block-id="cabbd3fbadd729a7c525a02f879b54e2" class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 216px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li class="fragment">
+	<p><span style="font-size:32px">Visualisations web personnalisables</span></p>
+	</li>
+	<li class="fragment">
+	<p><span style="font-size:32px">Open source </span><a href="https://github.com/hawkular/hawkular-charts" target="_blank">https://github.com/hawkular/hawkular-charts</a></p>
+	</li>
+	<li class="fragment">
+	<p><span style="font-size:32px">Licence Apache version 2</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background"><div data-block-id="5120bb5b5fb4f2b872c6a8b440669621" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Briques</h2>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-block-id="bef85ca9766d0e2002e0897e706cadff" style="min-width: 30px; min-height: 30px; width: 520px; height: 138.417px; left: 40px; top: 193px;" data-block-type="image" class="sl-block"><div style="z-index: 12;" class="sl-block-content"><img data-src="hawkular-powers-dev-pistolet-ops/1971044-AngularJS_logo.svg" data-natural-height="185" data-natural-width="695" style=""></div></div>
+<div data-block-id="afd564ba8cb8c8f35fe2f7d902606167" style="min-width: 30px; min-height: 30px; width: 229.663px; height: 218px; left: 675px; top: 240px;" data-block-type="image" class="sl-block"><div style="z-index: 13;" class="sl-block-content"><img data-src="hawkular-powers-dev-pistolet-ops/1971048-Logo_D3.svg" data-natural-height="243" data-natural-width="256" style=""></div></div>
+<div data-block-id="53adca8ee67c80b50620b63c31e9212e" style="min-width: 30px; min-height: 30px; width: 257.096px; height: 226px; left: 160px; top: 398px;" data-block-type="image" class="sl-block"><div style="z-index: 14;" class="sl-block-content"><img data-src="hawkular-powers-dev-pistolet-ops/1971071-Bower-logo.svg" data-natural-height="407" data-natural-width="463" style=""></div></div></section><section class="has-light-background"><div data-block-id="c68dc852098e79ceb9c59d08212137b7" class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Availability Chart</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div data-block-id="74999bf777271daae60acfe2d289c901" style="min-width: 30px; min-height: 30px; width: 861.571px; height: 163px; left: 60px; top: 280px;" data-block-type="image" class="sl-block"><div style="z-index: 12;" class="sl-block-content"><img data-src="hawkular-powers-dev-pistolet-ops/1971063-avail-chart.png" data-natural-height="147" data-natural-width="777" style=""></div></div></section><section class="has-light-background"><div data-block-id="b46db08f30a2eb1c4d863b15e0418394" class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Multiline Chart</h2>
+</div></div>
+
+
+
+
+
+
+
+
+<div data-block-id="14a30d4052a29f3ff8ec63285fcfac03" style="width: 862px; height: 349.547px; left: 57px; top: 186.5px;" data-block-type="image" class="sl-block"><div style="z-index: 12;" class="sl-block-content"><img data-src="hawkular-powers-dev-pistolet-ops/1971067-jvm-heap-chart.png" data-natural-height="324" data-natural-width="799" style=""></div></div></section><section class="has-light-background"><div data-block-id="7f6174f255d4547b40f844aa26ba00a6" class="sl-block" data-block-type="text" style="width: 900px; left: 30px; top: 58px; height: auto;"><div dir="ui" data-placeholder-text="Text" class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left;">
+<h1>Démo</h1>
+</div></div></section><section class="has-light-background"><div data-block-id="0158dfea83430a401317895d4a3921d3" class="sl-block" data-block-type="text" style="width: 857px; left: 23px; top: 87px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Où nous trouver ?</h2>
+</div></div>
+<div data-block-id="a6ab98125f7d8926078b1be824d6bf8f" class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 217px; height: auto;"><div dir="ui" class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li data-fragment-index="0" class="fragment">
+	<p><span style="font-size:32px">GitHub hawkular</span></p>
+	</li>
+	<li data-fragment-index="1" class="fragment">
+	<p><span style="font-size:32px">IRC #hawkular sur Freenode</span></p>
+	</li>
+	<li data-fragment-index="2" class="fragment">
+	<p><span style="font-size:32px">hawkular-dev @ lists.jboss.org</span></p>
+	</li>
+	<li data-fragment-index="3" class="fragment">
+	<p><span style="font-size:32px">Twitter @hawkular_org</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+
+
+</section><section class="has-light-background" data-id="6744514d2fafebaef81fe53219a298cb"><div data-block-id="3a4722c14fe833923ca9cdbe47495368" class="sl-block" data-block-type="text" style="width: 900px; left: 30px; top: 58px; height: auto;"><div data-placeholder-text="Text" class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left;">
+<h1>Questions ?</h1>
+</div></div></section><section class="has-light-background" data-id="64a1786f0b1065ea436bd04d6a0af6d2"><div data-block-id="122a04ad37b49e64c3f1336b4b4a7df0" class="sl-block" data-block-type="text" style="width: 900px; left: 30px; top: 58px; height: auto;"><div data-placeholder-text="Text" class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left;">
+<h1>Merci !</h1>
+</div></div></section>
+			</div>
+				<div id="theme-html-output"><svg xmlns:xlink="http://www.w3.org/1999/xlink" class="triangle-element" width="494" height="494" viewbox="0 0 494 494" preserveaspectratio="xMaxYMax meet" style="top: 80%; position:absolute; bottom:0; right:0; left: 70%; top: 70%; height: 30%; width: 30%; user-select:none; z-index:1;">
+  <g>
+    <path class="outer-triangle-element" style="fill:url(#pattern-corporate-2); " d="m 494,0 0,494 -494,0 z"></path>
+    <path class="inner-triangle-element" style="fill:#c00 ; " d="m 494,80 0,494 -494,0 z"></path>
+  </g>
+  
+  
+  <g transform="translate(247,350) scale(.45) ">
+    <path class="logotext" style="fill:white" d="M488.326 115.346c-1.816 0-3.281 1.469-3.281 3.284 0 1.809 1.465 3.271 3.281 3.271 1.81 0 3.277-1.461 3.277-3.271 0-1.815-1.468-3.284-3.277-3.284zm3.989 3.281c0 2.197-1.788 3.983-3.989 3.983-2.196 0-3.986-1.786-3.986-3.983 0-2.201 1.79-3.987 3.986-3.987 2.201 0 3.989 1.786 3.989 3.987m-4.716-.255v-1.262h.838c.424 0 .887.095.887.596 0 .626-.464.666-.989.666h-.736zm0 .525h.711l1.071 1.76h.693l-1.16-1.796c.604-.073 1.059-.388 1.059-1.113 0-.809-.481-1.158-1.439-1.158h-1.552v4.067h.618v-1.76m-22.172-63.12v11.917h15.415v4.338h-15.415v35.149c0 6.877 2.135 11.185 7.944 11.185 2.788 0 4.759-.366 6.145-.847l.647 4.142c-1.746.732-4.199 1.3-7.464 1.3-3.946 0-7.219-1.243-9.331-3.835-2.449-2.841-3.286-7.38-3.286-12.897v-34.197h-9.126v-4.338h9.126v-9.944l5.345-1.973m-26.645 37.095c-11.776-.339-27.325 1.445-27.325 14.429 0 7.771 5.13 11.265 10.764 11.265 9.011 0 14.135-5.58 16.001-10.843.389-1.154.56-2.313.56-3.24v-11.61zm5.346 16.059c0 4.276.172 8.704.789 12.845h-4.928l-.785-7.749h-.255c-2.619 4.167-8.645 8.979-17.241 8.979-10.881 0-15.944-7.652-15.944-14.863 0-12.483 11.018-20.002 33.017-19.77v-1.445c0-5.35-1.04-16.02-13.832-15.936-4.732 0-9.662 1.266-13.575 4.029l-1.702-3.89c4.94-3.349 10.974-4.673 15.865-4.673 15.605 0 18.591 11.715 18.591 21.378v21.095m-66.784-42.473c-4.115 0-7.801 1.187-10.899 3.098-3.215 1.883-5.831 4.79-7.388 7.8h-.216v-25.289l-5.35-1.58v71.289h5.35v-33.071c0-2.197.168-3.721.728-5.327 2.311-6.727 8.65-12.247 16.311-12.247 11.071 0 14.904 8.878 14.904 18.616v32.03h5.346v-32.62c0-20.142-13.66-22.699-18.786-22.699m-36.127-19.525l-13.656-3.852v30.478h-.225c-2.416-3.992-7.745-7.039-15.141-7.039-12.994 0-24.308 10.752-24.226 28.857 0 16.609 10.22 27.613 23.124 27.613 7.799 0 14.316-3.716 17.545-9.769h.244l.613 8.556h12.174c-.251-3.673-.45-9.624-.45-15.155v-59.689zm-13.656 51.413c0 1.432-.101 2.766-.414 3.986-1.376 5.913-6.211 9.724-11.799 9.724-8.602 0-13.526-7.252-13.526-17.18 0-10.026 4.88-17.785 13.681-17.785 6.144 0 10.541 4.331 11.75 9.594.233 1.107.307 2.472.307 3.564v8.097m-58.078-9.429c.063-5.007-2.116-13.166-11.268-13.166-8.412 0-11.909 7.631-12.521 13.166h23.789zm-23.762 9.518c.361 9.791 7.94 14.075 16.69 14.075 6.282 0 10.78-.984 14.911-2.502l2.021 9.399c-4.621 1.963-11.04 3.427-18.883 3.427-17.546 0-27.824-10.835-27.824-27.392 0-14.913 9.046-29.026 26.426-29.026 17.57 0 23.289 14.451 23.289 26.279 0 2.539-.226 4.578-.486 5.837l-36.145-.099m-46.773-13.329c0-7.234-.15-12.554-.443-17.366h11.831l.506 10.264h.388c2.659-7.607 8.96-11.484 14.793-11.484 1.334 0 2.111.05 3.204.295v12.87c-1.278-.251-2.473-.388-4.116-.388-6.51 0-11.027 4.142-12.248 10.335-.23 1.204-.354 2.65-.354 4.122v28.022h-13.671l.11-36.67m-40.274 30.239c-1.816 0-3.281 1.469-3.281 3.284 0 1.809 1.465 3.271 3.281 3.271 1.81 0 3.277-1.461 3.277-3.271 0-1.815-1.468-3.284-3.277-3.284zm3.989 3.281c0 2.197-1.788 3.983-3.989 3.983-2.196 0-3.986-1.786-3.986-3.983 0-2.201 1.79-3.987 3.986-3.987 2.201 0 3.989 1.786 3.989 3.987m-4.716-.255v-1.262h.838c.424 0 .887.095.887.596 0 .626-.464.666-.989.666h-.736zm0 .525h.711l1.071 1.76h.693l-1.16-1.796c.604-.073 1.059-.388 1.059-1.113 0-.809-.481-1.158-1.439-1.158h-1.552v4.067h.618v-1.76"></path>
+    <path class="face" style="fill:white" d="M146.083 123.002c-3.04-.697-6.264-1.138-9.526-1.138-5.579 0-10.655.965-14.398 2.527-.413.204-.706.636-.706 1.125 0 .181.045.361.113.515.443 1.281-.284 2.671-3.908 3.469-5.372 1.181-8.764 6.725-10.704 8.565-2.279 2.165-8.716 3.493-7.747 2.203.758-1.006 3.654-4.154 5.416-7.553 1.576-3.04 2.979-3.904 4.912-6.805.566-.848 2.765-3.837 3.405-6.201.718-2.305.476-5.203.751-6.393.396-1.721 2.018-5.451 2.14-7.556.071-1.193-4.974 1.7-7.367 1.7-2.392 0-4.724-1.436-6.862-1.538-2.647-.122-4.347 2.043-6.742 1.664-1.366-.219-2.518-1.425-4.908-1.513-3.402-.124-7.56 1.892-15.368 1.641-7.68-.251-14.775-9.708-15.743-11.212-1.135-1.763-2.521-1.763-4.03-.375-1.513 1.384-3.375.295-3.905-.635-1.007-1.76-3.701-6.912-7.873-7.993-5.769-1.495-8.69 3.193-8.31 6.925.385 3.788 2.833 4.85 3.967 6.863 1.132 2.015 1.712 3.312 3.846 4.203 1.511.634 2.074 1.564 1.625 2.807-.395 1.08-1.968 1.327-3.002 1.378-2.198.105-3.739-.492-4.862-1.208-1.307-.836-2.37-1.992-3.51-3.955-1.32-2.168-3.398-3.113-5.82-3.113-1.154 0-2.234.304-3.193.798-3.794 1.978-8.312 3.144-13.175 3.144l-5.484.005c10.518 31.194 40.013 53.656 74.756 53.656 27.752 0 52.156-14.331 66.214-36.001"></path>
+    <path class="black-circle" style="fill:black" d="M97.244 115.77c.405.394 1.105 1.728.249 3.416-.479.896-.995 1.524-1.917 2.261-1.109.891-3.278 1.917-6.253.032-1.597-1.015-1.696-1.356-3.903-1.071-1.578.207-2.205-1.384-1.639-2.71.568-1.318 2.899-2.389 5.795-.69 1.304.764 3.335 2.384 5.115.95.737-.591 1.178-.984 2.201-2.17.089-.116.266-.104.352-.017zm48.843 7.234c-3.04-.702-6.264-1.138-9.526-1.138-5.579 0-10.655.968-14.398 2.522-.413.208-.706.637-.706 1.129 0 .177.045.363.113.512.443 1.284-.284 2.676-3.908 3.471-5.372 1.181-8.764 6.723-10.704 8.566-2.279 2.161-8.716 3.494-7.747 2.204.758-1.009 3.654-4.156 5.416-7.556 1.576-3.037 2.979-3.903 4.912-6.801.566-.852 2.765-3.84 3.405-6.202.718-2.309.476-5.202.751-6.396.396-1.717 2.018-5.449 2.14-7.554.071-1.19-4.974 1.697-7.367 1.697-2.392 0-4.724-1.429-6.862-1.533-2.647-.127-4.347 2.04-6.742 1.662-1.366-.219-2.518-1.421-4.908-1.511-3.402-.126-7.56 1.89-15.368 1.638-7.68-.247-14.775-9.704-15.743-11.207-1.135-1.766-2.521-1.766-4.03-.377-1.513 1.38-3.375.294-3.905-.634-1.007-1.763-3.701-6.917-7.873-7.996-5.769-1.498-8.69 3.193-8.31 6.924.385 3.787 2.833 4.849 3.967 6.862 1.132 2.015 1.712 3.319 3.846 4.21 1.511.626 2.074 1.562 1.625 2.803-.395 1.081-1.968 1.328-3.002 1.378-2.198.103-3.739-.492-4.862-1.212-1.307-.83-2.37-1.987-3.51-3.953-1.32-2.168-3.398-3.111-5.82-3.111-1.154 0-2.234.306-3.193.798-3.794 1.974-8.312 3.146-13.175 3.146h-5.484c-2.669-7.915-4.116-16.395-4.116-25.212 0-43.562 35.313-78.871 78.873-78.871 43.561 0 78.87 35.31 78.87 78.871 0 15.808-4.649 30.526-12.656 42.872"></path>
+    <path class="hat" style="fill:#c00" d="M124.38 59.146c-.781 2.621-1.888 5.971-6.82 8.502-.719.369-.993-.235-.662-.802 1.864-3.17 2.195-3.962 2.737-5.212.758-1.829 1.155-4.43-.352-9.854-2.966-10.674-9.154-24.942-13.652-29.571-4.34-4.468-12.206-5.724-19.314-3.9-2.618.671-7.741 3.335-17.239 1.196-16.441-3.703-18.876 4.529-19.817 8.113-.946 3.589-3.21 13.78-3.21 13.78-.756 4.153-1.744 11.37 23.782 16.233 11.893 2.264 12.496 5.337 13.022 7.548.945 3.961 2.453 6.229 4.152 7.362 1.698 1.135 0 2.073-1.885 2.265-5.065.526-23.783-4.843-34.856-11.135-9.061-5.537-9.212-10.522-7.138-14.751-13.685-1.48-23.957 1.282-25.818 7.762-3.196 11.118 24.444 30.111 55.919 39.642 33.031 10 67.004 3.018 70.781-17.744 1.712-9.432-6.231-16.41-19.63-19.432zm-41.116-35.382c-.385.051-.406-.312-.111-.456 1.795-.875 4.401-1.675 7.417-1.982 1.106-.109 2.1-.163 3.091-.145 5.056.093 9.102 2.125 9.043 4.486-.06 2.366-4.205 4.19-9.262 4.077-1.636-.039-3.172-.275-4.495-.656-.155-.041-.269-.174-.269-.331 0-.158.114-.294.273-.334 3.154-.73 5.282-1.921 5.132-3.049-.198-1.494-4.323-2.306-9.215-1.816-.536.056-1.327.17-1.604.206zm-9.53 15.051c-9.11.66-10.056 1.644-11.762 3.461-2.406 2.563-5.576-3.325-5.576-3.325-1.901-.4-4.207-3.468-2.964-6.332 1.226-2.831 3.49-1.982 4.199-1.101.862 1.074 2.705 2.831 5.096 2.767 2.391-.063 5.15-.565 8.998-.565 3.898 0 6.521 1.456 6.668 2.707.127 1.068-.316 2.074-4.658 2.388"></path>
+  </g>
+<defs>
+
+<g style="fill:none;stroke-width:1;" class="brand-pattern-paths">
+<path id="pattern-corporate-path" d="M 45,0 30,15 15,0 M 60,22.5 52.5,30 60,37.5 M 60,45 45,30 60,15 M 60,7.5 37.5,30 60,52.5 M 45,60 30,45 15,60 M 60,60 0,0 M 22.5,0 30,7.5 37.5,0 M 7.5,0 30,22.5 52.5,0 M 0,15 15,30 0,45 M 22.5,60 30,52.5 37.5,60 M 7.5,60 30,37.5 52.5,60 M 0,37.5 7.5,30 0,22.5 M 0,52.5 22.5,30 0,7.5 M 0,60 60,0" style="stroke-linecap:square" class="pattern-path"></path>
+
+</g>
+
+<!-- -->
+
+
+<pattern class="normal" id="pattern-corporate" height="60" width="60" patternunits="userSpaceOnUse" patterntransform="scale(1.3333333333)">
+  <use xlink:href="#pattern-corporate-path"></use>
+</pattern>
+
+<pattern class="normal" id="pattern-corporate-2" height="60" width="60" patternunits="userSpaceOnUse" patterntransform="scale(1.5) rotate(45) translate(15,2)">
+  <use xlink:href="#pattern-corporate-path"></use>
+</pattern> 
+
+ </defs>
+
+
+
+
+
+
+</svg>
+</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":547214,"slug":"hawkular-powers-dev-pistolet-ops","title":"Hawkular Powers: le Dev au pistolet d'Ops","description":"Cette présentation vous fera découvrir Hawkular, un outil de monitoring pour les ops et les devs.  Vous apprendrez comment démarrer votre serveur et surveiller votre environnement de production ou de tests. Pour finir nous utiliserons Hawkular Metrics et Hawkular Charts directement dans notre application !","visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/05f0c7/decks.jpg","view_count":0,"user":{"id":329888,"username":"tsegismont","name":"Thomas Segismont","description":"","thumbnail_url":"https://www.gravatar.com/avatar/00af440bd8009abee9edba5828571809?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","pro":true,"enterprise":true,"enterprise_manager":false,"settings":{"id":160303,"present_controls":false,"present_upsizing":true,"present_notes":true},"registered":true},"background_transition":"none","transition":"none","theme_id":176,"theme_font":"overpass","theme_color":"no-color","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":false,"rtl":false,"version":2,"notes":{}}};
+			SLConfig.current_user = {
+				name: "Thomas Segismont",
+				username: "tsegismont",
+				pro: true
+			};
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script>
+			// Make Slides speaker notes available in the reveal.js speaker view
+			if( SLConfig.deck.notes ) {
+				[].forEach.call( document.querySelectorAll( '.reveal .slides section' ), function( slide ) {
+
+					var value = SLConfig.deck.notes[ slide.getAttribute( 'data-id' ) ];
+					if( value && typeof value === 'string' ) {
+						slide.setAttribute( 'data-notes', value );
+					}
+
+				} );
+			}
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: SLConfig.deck.share_notes,
+				slideNumber: SLConfig.deck.slide_number,
+
+				autoSlide: SLConfig.deck.auto_slide_interval || 0,
+				autoSlideStoppable: true,
+
+				rolling_links: SLConfig.deck.rolling_links || true,
+				center: SLConfig.deck.center || false,
+				loop: SLConfig.deck.should_loop || false,
+				rtl: SLConfig.deck.rtl || false,
+
+				transition: SLConfig.deck.transition,
+				backgroundTransition: SLConfig.deck.background_transition,
+
+				maxScale: 2,
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		
+  <script id="theme-js-output" type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-49086644-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+
+
+// piwik script
+
+var _paq = _paq || [];
+_paq.push(["trackPageView"]);
+_paq.push(["enableLinkTracking"]);
+
+(function() {
+var u = (("https:" == document.location.protocol) ? "https" : "http") +
+"://engstats.redhat.com/piwik/";
+_paq.push(["setTrackerUrl", u+"piwik.php"]);
+_paq.push(["setSiteId", "8"]);
+var d=document, g=d.createElement("script"),
+s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+})();
+
+
+</script>
+
+	</body>
+</html>
